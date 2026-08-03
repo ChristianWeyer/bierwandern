@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bierwandern in Franken — zehn Brauereiwege, geprüft für September 2026</title>
+<style>
+  :root{
+    --bg:#14100c; --bg2:#1c1712; --card:#221c15; --line:#3a2f22; --line2:#4a3c2a;
+    --fg:#f3ece0; --mut:#b3a58f; --dim:#8d8069;
+    --gold:#e0a63c; --amber:#c9762b; --hop:#7fa650; --red:#d4674f;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#faf6ef; --bg2:#f2eade; --card:#fffdf9; --line:#e4d8c3; --line2:#d6c6a8;
+      --fg:#241d14; --mut:#665846; --dim:#8a7c69;
+      --gold:#9d6a12; --amber:#a85a1c; --hop:#54762e; --red:#b2412a;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px 90px}
+  header{padding:52px 0 26px;border-bottom:1px solid var(--line);margin-bottom:24px}
+  h1{margin:0 0 10px;font-size:clamp(27px,4.2vw,42px);line-height:1.1;letter-spacing:-.02em}
+  h1 span{color:var(--gold)}
+  .sub{color:var(--mut);max-width:64ch;margin:0}
+  .meta{margin-top:16px;color:var(--dim);font-size:13px}
+  .meta b{color:var(--mut)}
+  .byline{margin:7px 0 0;color:var(--dim);font-size:13px}
+  .byline b{color:var(--gold);font-weight:600}
+  .byline span{color:var(--dim);opacity:.8}
+
+  .note{background:var(--bg2);border:1px solid var(--line);border-radius:11px;
+    margin:0 0 10px;font-size:14.5px;color:var(--mut)}
+  .note.warn{border-left:3px solid var(--red)}
+  .note.info{border-left:3px solid var(--gold)}
+  .note b{color:var(--fg)}
+  .note ul{margin:8px 0 0;padding-left:18px}
+  .note li{margin-bottom:5px}
+  .note > summary{list-style:none;cursor:pointer;padding:13px 18px;display:flex;
+    align-items:center;gap:10px;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;
+    font-weight:700;color:var(--fg);border-radius:9px;transition:.15s;user-select:none}
+  .note > summary::-webkit-details-marker{display:none}
+  .note > summary:hover{color:var(--gold)}
+  .note > summary::before{content:"";flex:0 0 auto;width:7px;height:7px;
+    border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);
+    transform:rotate(-45deg);transition:transform .18s;margin-left:2px}
+  .note[open] > summary::before{transform:rotate(45deg)}
+  .note > summary .hint{margin-left:auto;font-weight:400;text-transform:none;letter-spacing:0;
+    color:var(--dim);font-size:12.5px;text-align:right}
+  .note .inner{padding:0 18px 16px}
+  @media(max-width:600px){ .note > summary .hint{display:none} }
+
+  .card{scroll-margin-top:16px}
+  nav.toc{margin:20px 0 22px;padding:16px 18px;border:1px solid var(--line);
+    border-radius:11px;background:var(--card)}
+  nav.toc h3{margin:0 0 11px;font-size:12px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--dim);font-weight:700}
+  nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px 22px;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+  nav.toc a{display:flex;align-items:baseline;gap:9px;padding:6px 8px;margin:0 -8px;
+    border-radius:7px;text-decoration:none;color:var(--fg);font-size:14.5px;transition:.13s}
+  nav.toc a:hover{background:var(--bg2);color:var(--gold)}
+  nav.toc .n{color:var(--dim);font-size:12px;font-variant-numeric:tabular-nums;
+    flex:0 0 18px;text-align:right}
+  nav.toc .nm{flex:1 1 auto}
+  nav.toc .km{color:var(--dim);font-size:12.5px;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+  .lbl{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--dim);margin-right:4px}
+  button.chip{background:transparent;border:1px solid var(--line2);color:var(--mut);
+    padding:7px 14px;border-radius:999px;font-size:13.5px;cursor:pointer;font-family:inherit;transition:.15s}
+  button.chip:hover{border-color:var(--gold);color:var(--fg)}
+  button.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#1a1309;font-weight:600}
+  .count{color:var(--dim);font-size:13px;margin:14px 0 18px}
+
+  .grid{display:grid;gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;
+    display:grid;grid-template-columns:1fr auto;gap:4px 20px;align-items:start}
+  .card.hide{display:none}
+  .rank{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .card h2{margin:3px 0 4px;font-size:21px;letter-spacing:-.01em;grid-column:1}
+  .region{color:var(--dim);font-size:13.5px;margin:0 0 14px;grid-column:1}
+  .badge{grid-column:2;grid-row:1/3;align-self:start;text-align:right}
+  .seidla{font-size:30px;font-weight:800;color:var(--gold);line-height:1}
+  .seidla small{display:block;font-size:10.5px;font-weight:600;letter-spacing:.07em;
+    text-transform:uppercase;color:var(--dim);margin-top:4px;max-width:110px;line-height:1.35}
+  .facts{grid-column:1/-1;display:flex;flex-wrap:wrap;margin:0 0 14px;
+    border:1px solid var(--line);border-radius:9px;overflow:hidden}
+  .fact{flex:1 1 105px;padding:9px 13px;border-right:1px solid var(--line);background:var(--bg2)}
+  .fact:last-child{border-right:0}
+  .fact dt{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:0 0 3px}
+  .fact dd{margin:0;font-size:14.5px;font-weight:600}
+  .body{grid-column:1/-1}
+  .body p{margin:0 0 13px;color:var(--mut);font-size:14.5px}
+  .body p strong{color:var(--fg);font-weight:600}
+
+  .travel{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);
+    border-radius:9px;overflow:hidden;margin:0 0 13px}
+  .trip{background:var(--bg2);padding:10px 14px;display:grid;grid-template-columns:112px 1fr;gap:12px;font-size:14px}
+  .trip .k{color:var(--gold);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
+    padding-top:3px;font-weight:700}
+  .trip .v{color:var(--mut)}
+  .trip .v b{color:var(--fg);font-weight:600}
+
+  .days{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 13px;font-size:13.5px}
+  .day{padding:6px 12px;border-radius:8px;border:1px solid var(--line2);background:var(--bg2)}
+  .day.good{color:var(--hop);border-color:color-mix(in srgb,var(--hop) 50%,transparent)}
+  .day.bad{color:var(--red);border-color:color-mix(in srgb,var(--red) 45%,transparent)}
+  .day b{font-weight:700}
+
+  h4{margin:16px 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+  ul.stops{list-style:none;margin:0 0 13px;padding:0;font-size:14px}
+  ul.stops li{padding:7px 0;border-bottom:1px solid var(--line);color:var(--mut);
+    display:grid;grid-template-columns:1fr auto;gap:14px;align-items:baseline}
+  ul.stops li:last-child{border-bottom:0}
+  ul.stops b{color:var(--fg);font-weight:600}
+  ul.stops .when{color:var(--dim);font-size:12.5px;text-align:right;white-space:nowrap}
+  ul.stops li.shut{opacity:.65}
+  ul.stops li.shut b{text-decoration:line-through;text-decoration-thickness:1px}
+  ul.stops .when.no{color:var(--red)}
+  em.own,em.guest{font-style:normal;font-size:11px;padding:2px 8px;border-radius:999px;
+    white-space:nowrap;margin-left:6px;display:inline-block;vertical-align:1px;font-weight:600}
+  em.own{color:var(--hop);border:1px solid color-mix(in srgb,var(--hop) 45%,transparent);
+    background:color-mix(in srgb,var(--hop) 10%,transparent)}
+  em.guest{color:var(--dim);border:1px solid var(--line2);font-weight:500}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--dim);margin:-6px 0 12px}
+  .legend span{display:flex;align-items:center;gap:6px}
+  .legend i{width:9px;height:9px;border-radius:50%;display:inline-block}
+  .legend i.a{background:var(--hop)} .legend i.b{background:var(--dim)}
+
+  .alert{background:color-mix(in srgb,var(--red) 10%,transparent);
+    border:1px solid color-mix(in srgb,var(--red) 35%,transparent);
+    border-radius:9px;padding:11px 14px;margin:0 0 13px;font-size:14px;color:var(--mut)}
+  .alert b{color:var(--fg)}
+
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+  .tag{font-size:11.5px;padding:3px 10px;border-radius:999px;border:1px solid var(--line2);color:var(--dim)}
+  .tag.g{color:var(--hop);border-color:color-mix(in srgb,var(--hop) 45%,transparent)}
+  .tag.a{color:var(--amber);border-color:color-mix(in srgb,var(--amber) 45%,transparent)}
+
+  .links{display:grid;gap:7px;margin-top:4px}
+  .links a{color:var(--gold);text-decoration:none;font-size:13.5px;display:block}
+  .links a:hover{text-decoration:underline}
+  .links a .src{color:var(--dim);font-size:12px}
+
+  footer{margin-top:46px;padding-top:24px;border-top:1px solid var(--line);color:var(--dim);font-size:13.5px}
+  footer h3{color:var(--fg);font-size:14px;letter-spacing:.05em;text-transform:uppercase;margin:0 0 10px}
+  footer a{color:var(--mut)}
+  footer p{margin:0 0 12px}
+
+  @media(max-width:600px){
+    .card{grid-template-columns:1fr}
+    .badge{grid-column:1;grid-row:auto;text-align:left;margin-bottom:10px}
+    .badge .seidla small{max-width:none}
+    .trip{grid-template-columns:1fr;gap:3px}
+    ul.stops li{grid-template-columns:1fr}
+    ul.stops .when{text-align:left}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Bierwandern in <span>Franken</span></h1>
+  <p class="sub">Zehn Brauereiwege zwischen Frankenjura, Fränkischer Schweiz, Fränkischer Toskana,
+  Aischgrund und Oberpfälzer Jura — alle mit Bahn und Bus erreichbar. Jede Einkehr einzeln
+  gegengeprüft: Öffnungszeiten, Ruhetage, Betriebsurlaube und dauerhafte Schließungen.
+  Anreise jeweils ab Nürnberg Hbf und ab Lohr (Main) Bahnhof.</p>
+  <p class="meta"><b>Stand: Montag, 3. August 2026</b> · geprüft für eine Tour im September 2026 ·
+  Nürnberg und Bamberg als Drehscheiben · alle Wege außer dem Bierquellenweg im VGN-Gebiet</p>
+  <p class="byline">Recherchiert und zusammengestellt von <b>Christian Weyer</b>
+  und <b>Claude</b> <span>· die Quellen stehen bei jeder Tour, die Telefonnummern auch</span></p>
+</header>
+
+<details class="note info" style="border-left-color:var(--hop)" open>
+  <summary>Der richtige Termin im September 2026<span class="hint">Ende September schlägt Mitte September</span></summary>
+  <div class="inner">
+  <b>Ende September schlägt Mitte September.</b> In der zweiten Septemberwoche fallen mehrere
+  Betriebsurlaube zusammen, ab dem 16. September ist fast alles wieder offen:
+  <ul>
+    <li><b>Bis 15.9. geschlossen:</b> Krug-Bräu Breitenlesau und Brauerei Wagner in Merkendorf.
+      Beide sind ab 16.9. wieder da. Ein Wochenende am 12./13.9. fällt also genau in die
+      schlechteste Woche.</li>
+    <li><b>Bis 28.9. geschlossen:</b> Lindenbräu in Gräfenberg (11.–28.9.). Der Fünf-Seidla-Steig
+      bringt es im ganzen September nur auf vier von fünf Brauereien — komplett erst wieder
+      ab <b>Samstag, 3. Oktober</b>.</li>
+    <li><b>Läuft Mitte September aus:</b> Griess-Keller in Geisfeld und Roßdorfer Felsenkeller
+      beenden ihre Saison, der Stäffala-Keller in Forchheim hat bereits zu.
+      Wer die Fränkische Toskana will, geht besser am 19./20.9. als am 26./27.9.</li>
+    <li><b>Ebenfalls bis 11.9.:</b> Vollsperrung Weichendorf mit Sonderfahrplan auf der Buslinie 907
+      nach Memmelsdorf, dazu eine Haltestellensperrung der Linie 257 in Ebermannstadt.
+      Ab dem dritten Septemberwochenende beides erledigt.</li>
+    <li><b>Kein Problem im September:</b> Alle Freizeitlinien (230, 265, 970, 399) fahren noch
+      bis <b>1. November</b>. Die Sperrung im Pegnitztal endet um den 14. September, danach ist
+      auch Bayreuth wieder ohne Ersatzbus erreichbar.</li>
+  </ul>
+  <b>Empfehlung: Samstag/Sonntag 19./20. oder 26./27. September.</b> Der stärkste Kandidat ist die
+  Zwei-Tages-Kombination <b>Burg- und Bier-Pfad Waischenfeld (Sa) plus Brauereienweg Aufseß (So)</b>
+  mit Übernachtung bei Krug-Bräu — dann sind an beiden Tagen alle Brauereien offen, und der Bus 230
+  verbindet die beiden Wege direkt.
+  </div>
+</details>
+
+<details class="note warn">
+  <summary>Was diese Recherche zutage gefördert hat<span class="hint">Vier Wege tragen Namen, die nicht mehr stimmen</span></summary>
+  <div class="inner">
+  Bierwanderwege altern schlecht. Mehrere Wege tragen noch Namen, die nicht mehr stimmen:
+  <ul>
+    <li><b>13-Brauereien-Weg:</b> es sind keine 13 mehr. Krugs Gasthof ist seit 2019 zu,
+      Reh schenkt gar nicht aus, Brandholz muss wegen Sanierung raus (Meldung Januar 2026),
+      Lindenbräu ist keine Brauerei. Realistisch bleiben zehn ausschenkende Betriebe.</li>
+    <li><b>Bierquellen-Wanderweg:</b> Brauerei Herold hat <b>2025 den Betrieb eingestellt</b> —
+      von vier Bierquellen sind drei übrig, und eine davon öffnet nur zehn Stunden pro Woche.</li>
+    <li><b>Fränkische Toskana:</b> von den beworbenen sieben Brauereien schenken aktuell nur vier aus.</li>
+    <li><b>Forchheimer Kellerwald:</b> 23 Keller — außerhalb des Annafests haben aber nur sieben offen.</li>
+  </ul>
+  </div>
+</details>
+
+<details class="note warn">
+  <summary>Was diese Wege unzuverlässig macht<span class="hint">Ruhetage, Betriebsurlaube, Saisonbusse</span></summary>
+  <div class="inner">
+  Drei Dinge kippen eine Bierwanderung zuverlässiger als schlechtes Wetter, und keines davon
+  steht in der Wegbeschreibung:
+  <ul>
+    <li><b>Ruhetage, die sich stapeln.</b> Fast jeder Betrieb hat zwei, und sie liegen nicht
+      koordiniert. Auf manchen Wegen bleibt an bestimmten Tagen buchstäblich nichts offen.</li>
+    <li><b>Betriebsurlaube, die niemand veröffentlicht.</b> Für die meisten Brauereien war
+      online nichts zu finden — das heißt nicht, dass es keine gibt.</li>
+    <li><b>Freizeitbusse mit Saison.</b> Die Linien 230, 265, 970 und 399 fahren nur vom
+      1. Mai bis 1. November und nur an Samstagen, Sonntagen und Feiertagen. Ohne sie sind
+      Aufseß, Hallerndorf und Tiefenellern praktisch nicht erreichbar.</li>
+  </ul>
+  Deshalb steht bei jeder Tour, welcher Wochentag funktioniert — und welcher gar nicht.
+  </div>
+</details>
+
+<details class="note info">
+  <summary>Die drei Regeln, die fast alles erklären<span class="hint">Montag ist tot, Samstag ist König</span></summary>
+  <div class="inner">
+  <b>Erstens: Montag und Dienstag sind tot.</b> Auf dem Fünf-Seidla-Steig haben montags
+  <b>alle fünf</b> Brauereien geschlossen, auf dem Bierquellenweg alle drei.
+  <b>Zweitens: Samstag und Sonntag sind die einzigen Tage, an denen die Freizeitbusse fahren.</b>
+  Die Linien 230, 265 und 970 verkehren ausschließlich Sa/So/Feiertag und nur vom 1. Mai bis 1. November —
+  ohne sie sind Aufseß, Hallerndorf und Tiefenellern praktisch nicht erreichbar.
+  <b>Drittens: Spätsommer ist Betriebsurlaubszeit.</b> Bis Mitte September schließen fränkische
+  Brauereigasthöfe reihenweise für zwei bis drei Wochen — siehe den Terminkasten oben.
+  </div>
+</details>
+
+<details class="note info">
+  <summary>Eigenes Bier oder nur Ausschank?<span class="hint">Wie die grünen Markierungen zu lesen sind</span></summary>
+  <div class="inner">
+  Nicht jede Station an einem Bierwanderweg braut selbst. In den Einkehrlisten unten ist deshalb
+  bei jeder Station vermerkt, <b>welche Brauerei im Glas landet</b> — grün markiert, wenn es das
+  eigene Bier des Hauses ist, grau, wenn es ein Gasthaus oder ein verpachteter Ausschankkeller ist.
+  Der Unterschied ist größer, als die Wegnamen vermuten lassen: Am Kreuzberg schenken sieben von
+  neun Stationen eigenes Bier aus, in Neumarkt nur drei von sieben, und im Forchheimer Kellerwald
+  sind fast alle Keller reine Ausschankstellen — nur Greif und Hebendanz gehören zu einer
+  Forchheimer Brauerei.
+  </div>
+</details>
+
+<nav class="toc">
+  <h3>Die zehn Touren</h3>
+  <ol>
+    <li><a href="#seidla"><span class="n">1</span><span class="nm">Fünf-Seidla-Steig</span><span class="km">18 km · 5 Brauereien</span></a></li>
+    <li><a href="#forchheim"><span class="n">2</span><span class="nm">Forchheimer Kellerwald</span><span class="km">10,3 km · 7 Keller</span></a></li>
+    <li><a href="#kreuzberg"><span class="n">3</span><span class="nm">Keller am Kreuzberg</span><span class="km">12 km · 9 Einkehren</span></a></li>
+    <li><a href="#neumarkt"><span class="n">4</span><span class="nm">Neumarkter Bier-Vielfalt</span><span class="km">15 km · 7 Einkehren</span></a></li>
+    <li><a href="#toskana"><span class="n">5</span><span class="nm">Fränkische Toskana</span><span class="km">16 km · 4 mit Ausschank</span></a></li>
+    <li><a href="#dreizehn"><span class="n">6</span><span class="nm">13-Brauereien-Weg</span><span class="km">12 km · 5 Brauereien</span></a></li>
+    <li><a href="#aufsess"><span class="n">7</span><span class="nm">Brauereienweg Aufseß</span><span class="km">14 km · 4 Brauereien</span></a></li>
+    <li><a href="#waischenfeld"><span class="n">8</span><span class="nm">Burg- und Bier-Pfad Waischenfeld</span><span class="km">11,5 km · 3 Brauereien</span></a></li>
+    <li><a href="#heiligenstadt"><span class="n">9</span><span class="nm">Brauereienweg Heiligenstadt</span><span class="km">14,5 km · 2 Brauereien</span></a></li>
+    <li><a href="#bierquellen"><span class="n">10</span><span class="nm">Bierquellen-Wanderweg</span><span class="km">18 km · 3 Brauereien</span></a></li>
+  </ol>
+</nav>
+
+<div class="controls">
+  <span class="lbl">Filter</span>
+  <button class="chip" aria-pressed="false" data-f="oepnv">Ohne Bus erreichbar</button>
+  <button class="chip" aria-pressed="false" data-f="kurz">≤ 15 km</button>
+  <button class="chip" aria-pressed="false" data-f="viele">5+ Einkehren</button>
+  <button class="chip" aria-pressed="false" data-f="keller">Keller-Atmosphäre</button>
+</div>
+<div class="controls">
+  <span class="lbl">Sortieren</span>
+  <button class="chip" aria-pressed="true" data-s="empf">Empfehlung</button>
+  <button class="chip" aria-pressed="false" data-s="km">Länge</button>
+  <button class="chip" aria-pressed="false" data-s="brau">Einkehren</button>
+  <button class="chip" aria-pressed="false" data-s="fahrt">Anfahrt ab Nürnberg</button>
+  <button class="chip" aria-pressed="false" data-s="lohr">Anfahrt ab Lohr</button>
+</div>
+<p class="count" id="count"></p>
+
+<div class="grid" id="grid">
+
+<!-- 1 -->
+<article id="seidla" class="card" data-empf="1" data-km="18" data-brau="5" data-fahrt="45" data-lohr="190"
+         data-tags="oepnv viele">
+  <div class="rank">Die Referenztour</div>
+  <h2>Fünf-Seidla-Steig</h2>
+  <p class="region">Weißenohe – Gräfenberg – Hohenschwärz – Thuisbrunn · Frankenjura</p>
+  <div class="badge"><div class="seidla">5</div><small>Brauereien<br>+ 2 Nebenbetriebe</small></div>
+  <dl class="facts">
+    <div class="fact"><dt>Strecke</dt><dd>10 km</dd></div>
+    <div class="fact"><dt>Als Rundweg</dt><dd>17–19 km</dd></div>
+    <div class="fact"><dt>Höhenmeter</dt><dd>ca. 390 hm</dd></div>
+    <div class="fact"><dt>Dauer</dt><dd>4–8 h</dd></div>
+  </dl>
+  <div class="body">
+    <div class="travel">
+      <div class="trip"><span class="k">ab Nürnberg</span><span class="v">
+        <b>U2 Hbf → Nordostbahnhof</b>, dort <b>Gräfenbergbahn RB 21</b> bis Weißenohe.
+        Rund 40–50 Min. inklusive Umstieg, Stundentakt auch am Wochenende. Rückfahrt ab Gräfenberg
+        oder Weißenohe. <b>Wichtig:</b> die RB 21 fährt nicht ab Hauptbahnhof.</span></div>
+      <div class="trip"><span class="k">ab Lohr</span><span class="v">
+        Lohr Bahnhof → Würzburg (RE 54/55, 35–40 Min.) → Nürnberg Hbf (RE 10 rund 1:12, ICE 0:53)
+        → U2 → RB 21. Insgesamt <b>etwa 3 Stunden</b>, mit ICE gut 20 Min. weniger.
+        Drei Umstiege — die aufwendigste Anreise der Liste.</span></div>
+    </div>
+    <div class="alert"><b>Im September nur vier von fünf:</b> Lindenbräu in Gräfenberg hat vom
+    <b>11. bis 28. September</b> Betriebsurlaub. Wer alle fünf Brauereien will, muss auf
+    <b>Samstag, den 3. Oktober</b> ausweichen — dann ist auch die Gräfenbergbahn wieder störungsfrei.</div>
+    <div class="days">
+      <span class="day good"><b>Bester Tag:</b> Samstag — alle 5 offen, früheste Öffnungszeiten</span>
+      <span class="day bad"><b>Schlechtester:</b> Montag — <b>alle 5 geschlossen</b></span>
+    </div>
+    <p>Der Klassiker, und mit der direkten Bahnanbindung die richtige erste Bierwanderung ab Nürnberg.
+    Start an der <strong>Klosterbrauerei Weißenohe</strong>, über Wald- und Wiesenwege nach Gräfenberg
+    mit gleich zwei Brauereien, weiter nach Hohenschwärz und ins Felsendorf Thuisbrunn.
+    Vier Infostationen erklären unterwegs Rohstoffe und Brauprozess. Stempelkarte mitnehmen:
+    fünf Stempel ergeben den Steig-Krug zum vergünstigten Preis.</p>
+    <h4>Einkehr und Ruhetage</h4>
+    <p class="legend"><span><i class="a"></i> schenkt eigenes Bier aus</span>
+      <span><i class="b"></i> Gasthaus ohne eigene Braustätte</span></p>
+    <ul class="stops">
+      <li><span><b>Klosterbrauerei Weißenohe</b> — Wirtshaus &amp; Biergarten
+        <em class="own">Weißenohe</em></span>
+        <span class="when">Fr–Sa 10–21, So 11–20 · <span class="no">Mo–Do zu</span></span></li>
+      <li><span><b>Friedmann's Bräustübl</b>, Gräfenberg — seit Dez. 2025 neue Pächter
+        <em class="own">Friedmann</em></span>
+        <span class="when">Mi ab 17, Do–So ab 10/11 · <span class="no">Mo, Di zu</span></span></li>
+      <li><span><b>Biergarten zum Bergschlösschen</b>, Gräfenberg — Saison Mai–September
+        <em class="own">Friedmann</em></span>
+        <span class="when">Fr ab 16, Sa/So nachm. · <span class="no">Mo–Do zu</span></span></li>
+      <li><span><b>Brauereigasthof Lindenbräu</b>, Gräfenberg — Küche nur bis 19:30
+        <em class="own">Lindenbräu</em></span>
+        <span class="when">Di–Sa 11–22 · <span class="no">So, Mo zu</span></span></li>
+      <li><span><b>Brauereigasthaus Hofmann</b>, Hohenschwärz — nur Barzahlung
+        <em class="own">Hofmann</em></span>
+        <span class="when">Mi, Fr–So 10–21 · <span class="no">Mo, Di, Do zu</span></span></li>
+      <li><span><b>Gasthof Seitz – Thuisbrunner Elchbräu</b> — Küche bis 20 Uhr
+        <em class="own">Elchbräu</em></span>
+        <span class="when">Di, Fr–So ab 10/11 · <span class="no">Mo, Mi, Do zu</span></span></li>
+      <li><span><b>Gasthof Goldener Stiefel</b>, Gräfenberg — seit 2024 griechische Küche
+        <em class="own">Friedmann-Pachtbetrieb</em></span>
+        <span class="when">Di–So · <span class="no">Mo zu</span></span></li>
+    </ul>
+    <p><strong>Hier schenkt jede Station eigenes Bier aus</strong> — das ist der Grund, warum
+    dieser Weg der sauberste der Liste ist. Friedmann betreibt drei davon: Bräustübl, den
+    Saison-Biergarten am Michelsberg und den verpachteten Goldenen Stiefel.</p>
+    <div class="alert"><b>Betriebsurlaube im Planungszeitraum:</b> Elchbräu ist bis zum
+    <b>10. September</b> im Urlaub, Lindenbräu vom <b>11. bis 28. September</b>.
+    Zwischen dem 11. und 28. September sind also selbst samstags nur vier von fünf offen —
+    die anderen Urlaube liegen davor und sind bis dahin erledigt.</div>
+    <div class="tags"><span class="tag g">Bahn ohne Bus</span><span class="tag a">Stempelkarte &amp; Krug</span>
+      <span class="tag">20-km-Variante ab Egloffstein</span></div>
+    <div class="links">
+      <a href="https://www.fuenf-seidla-steig.de/" target="_blank" rel="noopener">Offizielle Wegseite mit Karte und Stempelkarte <span class="src">fuenf-seidla-steig.de</span></a>
+      <a href="https://www.fuenf-seidla-steig.de/brauereien-und-gasthaeuser/" target="_blank" rel="noopener">Öffnungszeiten und Betriebsurlaube aller Brauereien <span class="src">fuenf-seidla-steig.de</span></a>
+      <a href="https://www.vgn.de/wandern/fuenf_seidla_steig/" target="_blank" rel="noopener">VGN-Wandertour 19 · Tourenbeschreibung und Anreise <span class="src">vgn.de</span></a>
+      <a href="https://www.vgn.de/media/19-fuenf-seidla-steig.pdf" target="_blank" rel="noopener">VGN-Tourenblatt 19 als PDF zum Mitnehmen <span class="src">vgn.de · PDF</span></a>
+    </div>
+  </div>
+</article>
+
+<!-- 2 -->
+<article id="forchheim" class="card" data-empf="2" data-km="10.3" data-brau="7" data-fahrt="35" data-lohr="125"
+         data-tags="oepnv kurz viele keller">
+  <div class="rank">Die schnellste</div>
+  <h2>Bierkellerwanderung Forchheimer Kellerwald</h2>
+  <p class="region">Forchheim · Rundweg ab dem Kellerwald · Oberfranken</p>
+  <div class="badge"><div class="seidla">7</div><small>von 23 Kellern<br>außerhalb Annafest</small></div>
+  <dl class="facts">
+    <div class="fact"><dt>Länge</dt><dd>10,3 km</dd></div>
+    <div class="fact"><dt>Gehzeit</dt><dd>3:10 h</dd></div>
+    <div class="fact"><dt>Höhenmeter</dt><dd>207 hm</dd></div>
+    <div class="fact"><dt>Schwierigkeit</dt><dd>leicht</dd></div>
+  </dl>
+  <div class="body">
+    <div class="travel">
+      <div class="trip"><span class="k">ab Nürnberg</span><span class="v">
+        <b>S1 direkt bis Forchheim (Oberfr)</b>, rund 33–40 Min., dichter Takt.
+        Vom Bahnhof 1,5–2 km durch die Altstadt zum Kellerwald — dieser Weg ist der „Walk of Beer".
+        <b>Nicht</b> am neuen Halt Forchheim Nord aussteigen.</span></div>
+      <div class="trip"><span class="k">ab Lohr</span><span class="v">
+        <b>Der beste Fränkische-Schweiz-Einstieg ab Lohr.</b> Lohr → Würzburg (35–40 Min.) →
+        Forchheim mit dem <b>RE 20 durchgehend</b> (rund 70 Min., aber Zweistundentakt).
+        Gesamt etwa <b>2 Stunden</b>. Über Nürnberg wären es 2:35–3:00 — also nicht über Nürnberg fahren.</span></div>
+    </div>
+    <div class="days">
+      <span class="day good"><b>Bester Tag:</b> Sonntag — alle 7 offen, meist schon ab 10–12 Uhr</span>
+      <span class="day bad"><b>Schlechtester:</b> Montag — nur 3 von 7, auch der Schweizer Keller zu</span>
+    </div>
+    <p>Der Forchheimer Kellerwald ist mit <strong>23 Bierkellern auf 20.000 m²</strong> und rund
+    30.000 Sitzplätzen eines der größten zusammenhängenden Kelleräreale Deutschlands, gewachsen aus
+    einem Felsenkeller-Netz des 17. Jahrhunderts mit drei bis vier Kilometern unterirdischer Gänge.
+    Der Haken: <strong>16 der 23 Keller öffnen ausschließlich zum Annafest.</strong> Außerhalb
+    bleiben sieben — die sind dafür ganzjährig oder von April bis September da.</p>
+    <div class="alert"><b>Im September ist der Kellerwald wieder ruhig</b> — das Annafest liegt
+    im Hochsommer, dann wird der Wald für elf Tage zum Volksfest mit Fahrgeschäften und Live-Musik.
+    <b>Der September ist die letzte gute Zeit für die Wanderung</b>, aber es wird schon dünner:
+    Der <b>Stäffala-Keller hat seine Saison bereits beendet</b>, Hebendanz und Eichhorn schließen
+    Ende September, und der Greif Keller stellt Anfang Oktober auf Winterzeiten mit drei Ruhetagen um.</div>
+    <h4>Die sieben Keller außerhalb des Annafests</h4>
+    <p class="legend"><span><i class="a"></i> Keller der eigenen Brauerei</span>
+      <span><i class="b"></i> Ausschankkeller, schenkt fremdes Bier</span></p>
+    <ul class="stops">
+      <li><span><b>Greif Keller</b> — bei Regen geschlossen <em class="own">Greif, Forchheim</em></span>
+        <span class="when">Mai–Sept Di–So · <span class="no">Mo zu</span> (Winter Mo–Mi)</span></li>
+      <li><span><b>Hebendanz Keller</b> — bei Regen geschlossen <em class="own">Hebendanz, Forchheim</em></span>
+        <span class="when">nur April–Sept, täglich ab 12</span></li>
+      <li><span><b>Schindlerkeller</b> — seit Mai 2026 neue Wirtin, griechisch-fränkisch
+        <em class="guest">Greif</em></span>
+        <span class="when">Mo–Sa 11–23:30, So ab 10 · kein Ruhetag</span></li>
+      <li><span><b>Glockenkeller</b> <em class="guest">Rittmayer</em></span>
+        <span class="when">Mo/Do/Fr ab 16:30, Sa ab 11, So ab 9:30 · <span class="no">Di zu</span></span></li>
+      <li><span><b>Winterbauerkeller</b> — 2025 zu, 2026 wieder offen
+        <em class="guest">Hofmann, Mahrs Bräu</em></span>
+        <span class="when">Di–Sa 11–21, So 11–15 · <span class="no">Mo zu</span></span></li>
+      <li><span><b>Eichhornkeller</b> — bei Regen geschlossen <em class="guest">Bruno's, Rittmayer</em></span>
+        <span class="when">Ostern–Sept, Mi–So · <span class="no">Mo, Di zu</span></span></li>
+      <li><span><b>Stäffala-Keller</b> — Ruhetage widersprüchlich, vorher anrufen
+        <em class="guest">Veldensteiner, Simon</em></span>
+        <span class="when">Ende Apr–Ende Aug, Fr–So</span></li>
+      <li><span><b>Schweizer Keller</b> — bei km 5,5, nicht im Kellerwald
+        <em class="guest">kein eigenes Bier</em></span>
+        <span class="when">Mi–Sa 16–21, So 11–21 · <span class="no">Mo, Di zu</span></span></li>
+    </ul>
+    <p>Forchheim funktioniert anders als die Dorfbrauereien: <strong>die Keller sind überwiegend
+    Ausschankstellen, nicht Braustätten.</strong> Nur Greif und Hebendanz sind Forchheimer Brauereien
+    mit eigenem Keller im Wald — bei allen anderen schenkt ein Pächter fremdes Bier aus.
+    Die Zuordnungen oben stammen aus der Annafest-Liste 2026 und können außerhalb des Fests
+    abweichen. <strong>Brauerei Eichhorn braut seit 2022 nicht mehr selbst</strong>, ihr Bier
+    kommt heute von Hertl in Schnaid; in Forchheim brauen damit noch drei: Greif, Hebendanz und Neder.</p>
+    <p>Warnhinweis fürs Wetter: <strong>Hebendanz, Greif und Eichhorn schließen bei Regen.</strong>
+    Bei schlechter Prognose bleiben faktisch nur Schindler-, Glocken- und Winterbauerkeller.
+    Der <strong>Neder-Keller</strong> steht derzeit ohne Wirt und wird saniert — nicht einplanen.</p>
+    <div class="tags"><span class="tag g">35 Min. ab Nürnberg</span><span class="tag a">größtes Kellerareal</span>
+      <span class="tag">Walk of Beer: 2,8 km, 5 Stationen</span><span class="tag">Bargeld mitnehmen</span></div>
+    <div class="links">
+      <a href="https://www.forchheim-erleben.de/detail/id=5f13fd9ad5e6be051d0a8311" target="_blank" rel="noopener">Bierkellerwanderung · Tourdaten, GPX-Track und PDF <span class="src">forchheim-erleben.de</span></a>
+      <a href="https://www.forchheim-erleben.de/kulinarik/kellerwald/kellerwald-oeffnungszeiten" target="_blank" rel="noopener">Öffnungszeiten aller Keller im Kellerwald <span class="src">forchheim-erleben.de</span></a>
+      <a href="https://www.walk-of-beer.de/stationen" target="_blank" rel="noopener">Walk of Beer · die fünf Stationen vom Bahnhof zum Kellerwald <span class="src">walk-of-beer.de</span></a>
+      <a href="https://www.annafest.bayern/essen-trinken/bierkeller" target="_blank" rel="noopener">Annafest · alle 23 Keller mit Festbier-Zuordnung <span class="src">annafest.bayern</span></a>
+    </div>
+  </div>
+</article>
+
+<!-- 3 -->
+<article id="kreuzberg" class="card" data-empf="3" data-km="12" data-brau="9" data-fahrt="45" data-lohr="135"
+         data-tags="oepnv kurz viele keller">
+  <div class="rank">Die Keller-Tour</div>
+  <h2>Zu den Kellern am Kreuzberg</h2>
+  <p class="region">Buttenheim – Altendorf – Großbuchfeld – Kreuzberg – Hallerndorf – Stiebarlimbach</p>
+  <div class="badge"><div class="seidla">9</div><small>Einkehren,<br>davon 7 mit Bier</small></div>
+  <dl class="facts">
+    <div class="fact"><dt>Länge</dt><dd>11–12 km</dd></div>
+    <div class="fact"><dt>Gehzeit</dt><dd>ca. 3 h</dd></div>
+    <div class="fact"><dt>Höhenmeter</dt><dd>170 hm</dd></div>
+    <div class="fact"><dt>Dichte</dt><dd>alle 1,3 km</dd></div>
+  </dl>
+  <div class="body">
+    <div class="travel">
+      <div class="trip"><span class="k">ab Nürnberg</span><span class="v">
+        <b>S1 direkt bis Buttenheim</b>, rund 41–51 Min. Rückfahrt mit dem
+        <b>Bus 265 „Hallerndorfer-Keller-Express"</b> ab Hallerndorf oder Stiebarlimbach —
+        <b>nur Sa/So/Feiertag und nur 1. Mai bis 1. November.</b>
+        An anderen Tagen 45 Min. Rückweg zu Fuß einplanen.</span></div>
+      <div class="trip"><span class="k">ab Lohr</span><span class="v">
+        Über Würzburg nach <b>Bamberg</b> (RE 20/54, zusammen stündlich, ~55 Min.), dann
+        <b>S1 nur 11 Min. bis Buttenheim</b>. Gesamt etwa <b>2 bis 2,5 Stunden</b> —
+        deutlich schneller als der Umweg über Nürnberg.</span></div>
+    </div>
+    <div class="days">
+      <span class="day good"><b>Bester Tag:</b> Samstag — alle Keller offen, Bus fährt</span>
+      <span class="day"><b>Sonntag:</b> vorne alles offen, aber Stiebarlimbach fällt komplett aus</span>
+      <span class="day bad"><b>Schlechtester:</b> Montag — 2 von 9, kein Bus</span>
+    </div>
+    <p>Die höchste Einkehrdichte der ganzen Liste: <strong>neun Stationen auf zwölf Kilometern,
+    davon sieben mit eigenem Bier.</strong> Am Kreuzberg liegen gleich drei Keller nebeneinander
+    in der Hangflanke — Kastanien, Holzbänke, Blick über den Aischgrund. Oben steht die freistehende
+    <strong>Wallfahrtskirche von 1463</strong>. Historisch waren es vier Keller; der vierte,
+    Rittmayer Willersdorf, wird seit 1990 nicht mehr betrieben.</p>
+    <h4>Einkehr und Ruhetage</h4>
+    <p class="legend"><span><i class="a"></i> schenkt eigenes Bier aus (Brauerei in Klammern)</span>
+      <span><i class="b"></i> Gasthaus ohne eigene Braustätte</span></p>
+    <ul class="stops">
+      <li><span><b>Egloffsteiner Hof</b>, Altendorf — kurz nach dem Start
+        <em class="guest">kein eigenes Bier</em></span>
+        <span class="when">Mi–So, Sa erst ab 16:30 · <span class="no">Mo, Di zu</span></span></li>
+      <li><span><b>Gasthaus Weber</b>, Großbuchfeld — Karpfen Sept–April
+        <em class="guest">kein eigenes Bier</em></span>
+        <span class="when">Do–So, Sa ab 15 · <span class="no">Mo–Mi zu</span></span></li>
+      <li><span><b>Brauhaus am Kreuzberg</b> (Friedels Keller) <em class="own">Friedel, Schnaid</em></span>
+        <span class="when">27.4.–13.9.: Do–So ab 11 · <span class="no">Mo–Mi zu</span></span></li>
+      <li><span><b>Kreuzbergkeller Lieberth</b> — seit 2024 wieder bewirtschaftet
+        <em class="own">Lieberth</em></span>
+        <span class="when">Fr ab 15, Sa/So ab 11 · nur bei schönem Wetter</span></li>
+      <li><span><b>Kreuzbergkeller Rittmayer</b> — seit April 2026 neuer Pächter
+        <em class="own">Rittmayer</em></span>
+        <span class="when">täglich 11–21 · Ruhetag bei Regen</span></li>
+      <li><span><b>Brauereigasthaus Rittmayer</b>, Hallerndorf <em class="own">Rittmayer</em></span>
+        <span class="when">Di–Fr ab 16:30, Sa/So 10–22 · <span class="no">Mo zu</span></span></li>
+      <li><span><b>Lieberth-Dorfkeller</b> — an der Bushaltestelle Kellerberg
+        <em class="own">Lieberth</em></span>
+        <span class="when">Mitte Apr–Sept, Di/Do/Fr/Sa/So · <span class="no">Mo, Mi zu</span></span></li>
+      <li class="shut"><span><b>Brauerei-Gasthof Roppelt</b>, Stiebarlimbach <em class="own">Roppelt</em></span>
+        <span class="when"><span class="no">Mai–Ende Sept komplett zu</span> (Kellersaison)</span></li>
+      <li><span><b>Roppelt's Keller</b>, Stiebarlimbach — Wild und Karpfen je nach Saison
+        <em class="own">Roppelt</em></span>
+        <span class="when">Mai–Okt, Mo/Di/Fr/Sa ab 11 · <span class="no">Do, So zu</span></span></li>
+    </ul>
+    <p><strong>Sieben der neun Stationen schenken eigenes Bier aus</strong> — aus vier Brauereien:
+    Friedel (Schnaid), Lieberth und Rittmayer (beide Hallerndorf) und Roppelt (Stiebarlimbach).
+    Lieberth und Rittmayer betreiben je zwei Ausschankstellen, einen Keller am Kreuzberg und
+    einen im Ort. Egloffsteiner Hof und Gasthaus Weber sind reine Gasthäuser.</p>
+    <p>Zwei Details, die eine Tour kippen können: <strong>Roppelt's Keller hat seit 2018 sonntags
+    dauerhaft geschlossen</strong>, und der Gasthof macht den ganzen Sommer über Pause. Wer sonntags
+    geht, sollte deshalb <strong>in Hallerndorf enden statt in Stiebarlimbach.</strong>
+    Fünf der neun Betriebe stehen zudem unter Wettervorbehalt.</p>
+    <div class="tags"><span class="tag g">alle 1,3 km eine Einkehr</span>
+      <span class="tag a">3 Keller nebeneinander</span><span class="tag">Witzgall liegt abseits</span></div>
+    <div class="links">
+      <a href="https://www.vgn.de/wandern/kreuzberg_hallerndorf/" target="_blank" rel="noopener">VGN-Wandertour · Wegbeschreibung und alle Einkehren <span class="src">vgn.de</span></a>
+      <a href="https://www.vgn.de/wandern/kreuzberg_hallerndorf.pdf" target="_blank" rel="noopener">VGN-Tourenblatt als PDF <span class="src">vgn.de · PDF</span></a>
+      <a href="https://www.vgn.de/freizeit/freizeitlinien/hallerndorfer-keller-express" target="_blank" rel="noopener">Freizeitlinie 265 „Hallerndorfer-Keller-Express" · Fahrtage und Saison <span class="src">vgn.de</span></a>
+      <a href="https://hallerndorf.de/brauereien-und-keller/" target="_blank" rel="noopener">Gemeinde Hallerndorf · alle Brauereien und Keller mit Adressen <span class="src">hallerndorf.de</span></a>
+    </div>
+  </div>
+</article>
+
+<!-- 4 -->
+<article id="neumarkt" class="card" data-empf="4" data-km="15" data-brau="7" data-fahrt="20" data-lohr="165"
+         data-tags="oepnv kurz viele keller">
+  <div class="rank">Die nächstgelegene</div>
+  <h2>Neumarkter Bier-Vielfalt</h2>
+  <p class="region">Neumarkt i. d. OPf. · Rundweg ab Bahnhof · Oberpfälzer Jura</p>
+  <div class="badge"><div class="seidla">7</div><small>Einkehren,<br>3 mit eigenem Bier</small></div>
+  <dl class="facts">
+    <div class="fact"><dt>Länge</dt><dd>15 km</dd></div>
+    <div class="fact"><dt>Gehzeit</dt><dd>4,5–5,25 h</dd></div>
+    <div class="fact"><dt>Höhenmeter</dt><dd>266 hm</dd></div>
+    <div class="fact"><dt>Anfahrt</dt><dd>ab 20 Min.</dd></div>
+  </dl>
+  <div class="body">
+    <div class="travel">
+      <div class="trip"><span class="k">ab Nürnberg</span><span class="v">
+        <b>Die kürzeste Anfahrt der ganzen Liste.</b> Mit <b>RE 50 oder RE 22 nur 19–20 Minuten</b>,
+        mit der S3 rund 34–45 Min. Start und Ziel direkt am Bahnhof Neumarkt.
+        Die Korridorsanierung Nürnberg–Regensburg ist abgeschlossen, es fährt wieder alles regulär.</span></div>
+      <div class="trip"><span class="k">ab Lohr</span><span class="v">
+        Lohr → Würzburg (35–40 Min.) → Nürnberg (RE 10 1:12 / ICE 0:53) → RE/S3 nach Neumarkt.
+        Gesamt <b>2:40–3:00 Stunden</b>, mit ICE etwa 2:20. Als Tagestour grenzwertig,
+        aber machbar bei früher Abfahrt.</span></div>
+    </div>
+    <div class="days">
+      <span class="day good"><b>Bester Tag:</b> Samstag — alle 7 offen und zeitlich kompatibel</span>
+      <span class="day bad"><b>Schlechtester:</b> Montag — 3 von 7 nutzbar</span>
+    </div>
+    <p>Streng genommen keine Fränkische Schweiz, dafür 20 Minuten Anfahrt. Die Runde verbindet die
+    Bierkeller über der Stadt mit der <strong>Burgruine Wolfstein</strong>, der Wallfahrtskirche
+    Mariahilf (367 Stufen) und einem Stück Ludwig-Donau-Main-Kanal. Der Weg ist
+    <strong>nur gegen den Uhrzeigersinn markiert</strong>. Es gibt eine Stempelkarte.
+    Drei Brauereien gibt es in Neumarkt noch: Gansbräu, Glossner und Lammsbräu.</p>
+    <h4>Einkehr und Ruhetage</h4>
+    <ul class="stops">
+      <li><span><b>Oberer Ganskeller</b> — großer Biergarten, 200–250 Plätze
+        <em class="own">Gansbräu</em></span>
+        <span class="when">täglich ab 8:30/9:30 · kein Ruhetag</span></li>
+      <li><span><b>Unterer Ganskeller</b> <em class="own">Gansbräu</em></span>
+        <span class="when">Di–Sa ab 17 · <span class="no">So, Mo zu</span></span></li>
+      <li><span><b>Neumarkter Bräustübl</b> — mit Brauereimuseum im Keller
+        <em class="own">Glossner</em></span>
+        <span class="when">Sa/So/Ft 11–23, sonst ab 17 · <span class="no">Mo, Di evtl. zu</span></span></li>
+      <li><span><b>WITTMANNs · Bierbar Hüftgold</b> — direkt am Bahnhof, große Bierauswahl
+        <em class="guest">kein eigenes Bier</em></span>
+        <span class="when">Mo–Sa 8–23/24 · <span class="no">So nur bis 15</span></span></li>
+      <li><span><b>Hotel Schönblick</b> — 14–17 Uhr Mittagspause außer Sa
+        <em class="guest">kein eigenes Bier</em></span>
+        <span class="when">Mo–So, Sa durchgehend 11–24</span></li>
+      <li><span><b>AlmRefugio</b> (früher Almhof) <em class="guest">kein eigenes Bier</em></span>
+        <span class="when">Di–Sa ab 17:30, So 11:30–15 · <span class="no">Mo zu</span></span></li>
+      <li><span><b>Berggasthof Sammüller</b> <em class="guest">kein eigenes Bier</em></span>
+        <span class="when">Di–Sa 11:30–22, So bis 16:30 · Mo erst ab 17</span></li>
+    </ul>
+    <p><strong>Nur drei der sieben Stationen schenken eigenes Bier aus</strong> — die beiden
+    Ganskeller (Gansbräu) und das Bräustübl (Glossner). Die übrigen vier sind Gasthäuser und
+    Bierbars mit Fremdbier. Der Name „Bier-Vielfalt" meint hier eher die Auswahl im Glas
+    als die Zahl der Braustätten am Weg.</p>
+    <div class="alert"><b>Zwei Dinge vorher klären:</b> Beim Bräustübl widersprechen sich die Quellen —
+    die eigene Website nennt keinen Ruhetag, zwei Portale nennen Montag und Dienstag (Tel. 09181 23436).
+    Und das Hotel Schönblick hatte im Vorjahr einen mehrwöchigen Spätsommer-Betriebsurlaub;
+    ob 2026 wieder und wann genau, ist nirgends veröffentlicht (Tel. 09181 4749-10).
+    <b>Der Brauerei-Gasthof Blomenhof ist seit Oktober 2024 dauerhaft geschlossen</b> —
+    er steht deshalb nicht mehr auf der aktuellen Route. Lammsbräu hat keinen Gasthof,
+    nur einen Brauereiladen und Führungen nach Anmeldung.</div>
+    <div class="tags"><span class="tag g">20 Min. Anfahrt</span><span class="tag a">Stempelkarte</span>
+      <span class="tag">Burgruine Wolfstein</span><span class="tag">4. Auflage 06/2026</span></div>
+    <div class="links">
+      <a href="https://www.vgn.de/wandern/neumarkter_bier-vielfalt" target="_blank" rel="noopener">VGN-Wandertour 130 · Wegbeschreibung und Einkehren <span class="src">vgn.de</span></a>
+      <a href="https://www.vgn.de/media/neumarkt-prospekt.pdf" target="_blank" rel="noopener">VGN-Prospekt Tour 130, 4. Auflage 06/2026 <span class="src">vgn.de · PDF</span></a>
+      <a href="https://www.vgn.de/media/neumarkt-stempelkarte.pdf" target="_blank" rel="noopener">Stempelkarte zum Ausdrucken <span class="src">vgn.de · PDF</span></a>
+      <a href="https://www.tourismus-neumarkt.de/wege/neumarkter_bier-vielfalt-3274/" target="_blank" rel="noopener">Tourismus Neumarkt · Wegdaten und Markierung <span class="src">tourismus-neumarkt.de</span></a>
+    </div>
+  </div>
+</article>
+
+<!-- 5 -->
+<article id="toskana" class="card" data-empf="5" data-km="16" data-brau="7" data-fahrt="105" data-lohr="165"
+         data-tags="viele keller">
+  <div class="rank">Die dichteste — mit Einschränkung</div>
+  <h2>Fränkische Toskana · 7 Brauereien auf einen Streich</h2>
+  <p class="region">Tiefenellern – Lohndorf – Melkendorf – Geisfeld – Roßdorf – Strullendorf</p>
+  <div class="badge"><div class="seidla">4</div><small>schenken<br>wirklich aus</small></div>
+  <dl class="facts">
+    <div class="fact"><dt>Länge</dt><dd>16 km</dd></div>
+    <div class="fact"><dt>Gehzeit</dt><dd>ca. 5 h</dd></div>
+    <div class="fact"><dt>Höhenmeter</dt><dd>187 ↑ / 324 ↓</dd></div>
+    <div class="fact"><dt>Typ</dt><dd>Streckentour</dd></div>
+  </dl>
+  <div class="body">
+    <div class="travel">
+      <div class="trip"><span class="k">ab Nürnberg</span><span class="v">
+        S1 bis Bamberg (~55–60 Min.), dann <b>Freizeitlinie 970 „Fränkische Toskana-Express"</b>
+        bis Tiefenellern Ort (48 Min.). <b>Nur Sa/So/Feiertag, 1. Mai bis 1. November</b> —
+        samstags 5, sonntags 4 Fahrten. Rückfahrt ab Strullendorf mit der S1.</span></div>
+      <div class="trip"><span class="k">ab Lohr</span><span class="v">
+        <b>Klar schneller als über Nürnberg.</b> Lohr → Würzburg (35–40 Min.) → Bamberg
+        (RE 20 oder RE 54, ~55 Min., mit dem RE 54 teils sogar umsteigefrei ab Lohr) — zusammen
+        knapp <b>2 Stunden bis Bamberg</b>, dann Bus 970.</span></div>
+    </div>
+    <div class="alert"><b>Der Name verspricht mehr, als der Weg hält.</b> Von den sieben Brauereien
+    schenken nur vier aus: <b>Brauerei Krug</b> hat den Gasthof <b>seit 2019 geschlossen</b>
+    (Pächtersuche bis heute erfolglos, nur noch Flaschenverkauf Di 18–19 und Sa 9–11 Uhr),
+    <b>Reh</b> ist reiner Getränkeverkauf ohne Ausschank, und <b>Brandholz in Melkendorf</b>
+    muss wegen der Sanierung des Winkler-Areals raus — Meldung vom Januar 2026, für 2026 sind
+    keine Ausschanktermine veröffentlicht. Immerhin läuft dort der <b>Bieromat rund um die Uhr</b>.</div>
+    <div class="days">
+      <span class="day good"><b>Bester Tag:</b> Sonntag für die Keller, Samstag wenn Reh mit soll</span>
+      <span class="day bad"><b>Schlechtester:</b> Dienstag — vier Ruhetage plus kein Freizeitbus</span>
+    </div>
+    <p>Sanfte Hügellandschaft, das <strong>Sängerehrenmal von 1954</strong>, Skulpturen am Wegrand
+    und die vielleicht tausendjährige Wendelinus-Eiche. Netto-Abstieg, weil der Start oben liegt
+    und das Ziel im Regnitztal. Wer in Lohndorf einsteigt, spart zwei Kilometer.</p>
+    <h4>Einkehr und Ruhetage</h4>
+    <ul class="stops">
+      <li><span><b>Brauerei Hönig</b> · Gasthof zur Post, Tiefenellern — direkt am Start
+        <em class="own">Hönig</em></span>
+        <span class="when">Sa/So ab 10:30, Mo–Fr ab 15 · <span class="no">Do zu</span></span></li>
+      <li><span><b>Brauerei Hölzlein</b>, Lohndorf <em class="own">Hölzlein</em></span>
+        <span class="when">Mo/Do/Fr ab 16, Sa/So ab 15 · <span class="no">Di, Mi zu</span></span></li>
+      <li><span><b>Brauerei-Gasthof Griess</b>, Geisfeld <em class="own">Griess</em></span>
+        <span class="when">Mo/Do/Fr ab 15, Sa/So auch 10–12 · <span class="no">Di, Mi zu</span></span></li>
+      <li><span><b>Griess-Keller</b>, Geisfeld — separater Biergarten, kein Ruhetag
+        <em class="own">Griess</em></span>
+        <span class="when">Mitte Apr–Mitte Sept · bei Regen zu</span></li>
+      <li><span><b>Brauerei-Gasthof Sauer</b>, Roßdorf a. Forst <em class="own">Sauer</em></span>
+        <span class="when">Di–So 11–22 · <span class="no">Mo zu</span></span></li>
+      <li><span><b>Roßdorfer Felsenkeller</b> — Sauers eigener Keller <em class="own">Sauer</em></span>
+        <span class="when">Mitte Apr–Mitte Sept, ab 16, So ab 14</span></li>
+      <li><span><b>Schwanenkeller</b>, Strullendorf — kurz vor dem Bahnhof
+        <em class="guest">kein eigenes Bier</em></span>
+        <span class="when">täglich ab 11, Mo ab 16 · <span class="no">Di zu</span></span></li>
+      <li class="shut"><span><b>Privatbrauerei Reh</b>, Lohndorf — braut, schenkt aber nicht aus
+        <em class="guest">nur Verkauf</em></span>
+        <span class="when">Mo–Fr, Sa vormittags</span></li>
+      <li class="shut"><span><b>Brandholz-Brauerei</b>, Melkendorf — Areal in Sanierung
+        <em class="guest">nur Bieromat</em></span>
+        <span class="when"><span class="no">kein Ausschank</span> · Automat 24/7</span></li>
+      <li class="shut"><span><b>Brauerei Krug</b>, Geisfeld — Gasthof seit 2019 zu
+        <em class="guest">nur Flaschenverkauf</em></span>
+        <span class="when"><span class="no">Di 18–19, Sa 9–11</span></span></li>
+    </ul>
+    <p><strong>Sechs Ausschankstellen mit eigenem Bier bleiben</strong>, verteilt auf vier
+    Brauereien: Hönig, Hölzlein, Griess (Gasthof plus Keller) und Sauer (Gasthof plus Felsenkeller).
+    Reh, Brandholz und Krug brauen zwar, schenken aber nicht aus — dort gibt es nur Flaschen
+    beziehungsweise den Automaten. Der Schwanenkeller am Ziel ist ein reiner Ausschankkeller.</p>
+    <div class="tags"><span class="tag a">Bieromat rund um die Uhr</span>
+      <span class="tag">Freizeitbus nur Sa/So</span><span class="tag">Wendelinus-Eiche</span>
+      <span class="tag">Brückensperrung: Ersatzhalt 300 m vom Bahnhof</span></div>
+    <div class="links">
+      <a href="https://www.vgn.de/wandern/fraenkische_toskana" target="_blank" rel="noopener">VGN-Wandertour 194 · Wegbeschreibung und alle sieben Brauereien <span class="src">vgn.de</span></a>
+      <a href="https://www.vgn.de/freizeit/freizeitlinien/fraenkische-toskana-express" target="_blank" rel="noopener">Freizeitlinie 970 „Fränkische Toskana-Express" · Saison und Fahrtage <span class="src">vgn.de</span></a>
+      <a href="https://www.fraenkische-toskana.com/detail/id=608bd8d7b3b9c342377475ac" target="_blank" rel="noopener">Fränkische Toskana · Einkehrverzeichnis am 13-Brauereien-Weg <span class="src">fraenkische-toskana.com</span></a>
+      <a href="https://www.brauerei-krug.de/" target="_blank" rel="noopener">Brauerei Krug · Beleg für die dauerhafte Gasthof-Schließung <span class="src">brauerei-krug.de</span></a>
+    </div>
+  </div>
+</article>
+
+<!-- 6 -->
+<article id="dreizehn" class="card" data-empf="6" data-km="12" data-brau="5" data-fahrt="75" data-lohr="120"
+         data-tags="kurz viele">
+  <div class="rank">Der Baukasten</div>
+  <h2>13-Brauereien-Weg</h2>
+  <p class="region">Memmelsdorf – Merkendorf – Drosendorf – Meedensdorf · Landkreis Bamberg</p>
+  <div class="badge"><div class="seidla">5</div><small>auf der<br>Nordrunde</small></div>
+  <dl class="facts">
+    <div class="fact"><dt>Nordrunde</dt><dd>12 km · 3:30 h</dd></div>
+    <div class="fact"><dt>Südtour</dt><dd>16 km · 7 Brau.</dd></div>
+    <div class="fact"><dt>Gesamt</dt><dd>34,7 km · 10:25 h</dd></div>
+    <div class="fact"><dt>Höhenmeter</dt><dd>190 hm (Nord)</dd></div>
+  </dl>
+  <div class="body">
+    <div class="travel">
+      <div class="trip"><span class="k">ab Nürnberg</span><span class="v">
+        S1 bis <b>Bamberg</b> (nicht Strullendorf — das ist das Ziel der Streckentour),
+        dann <b>Bus 907</b> ab ZOB bis Memmelsdorf Markt, sonntags etwa stündlich.
+        Sa/So fährt zusätzlich die Freizeitlinie 970.</span></div>
+      <div class="trip"><span class="k">ab Lohr</span><span class="v">
+        <b>Das beste Ziel der ganzen Liste ab Lohr.</b> Lohr → Würzburg → Bamberg mit RE 20 oder
+        RE 54, zusammen stündlich, <b>knapp 2 Stunden bei nur einem Umstieg</b> — mit dem RE 54
+        teils umsteigefrei. Bamberg ist von Lohr aus schneller erreichbar als Nürnberg.</span></div>
+    </div>
+    <div class="days">
+      <span class="day good"><b>Bester Tag:</b> Samstag — alle zehn ausschenkenden Betriebe offen</span>
+      <span class="day bad"><b>Schlechtester:</b> Mo und Di — auf der Nordrunde je nur 2 von 5</span>
+    </div>
+    <p>Der Weg ist modular gedacht. Die <strong>Nordrunde</strong> ab Memmelsdorf bringt fünf
+    Brauereien auf zwölf leichten Kilometern, die <strong>Südtour</strong> ist identisch mit der
+    Fränkische-Toskana-Tour oben, und beides zusammen ergibt die Streckentour über 34,7 km.
+    Direkt am Start liegen mit Höhn und Drei Kronen zwei Brauereigasthöfe nebeneinander,
+    dazu das barocke Schloss Seehof mit 150 Parkplätzen.</p>
+    <div class="alert"><b>Der Name stimmt nicht mehr.</b> Drei konkurrierende offizielle Listen
+    füllen die Dreizehn unterschiedlich auf — mal mit Kellern, mal mit einem Gasthaus ohne Braustätte.
+    Realistisch sind es <b>zehn Brauereien mit eigenem Ausschank</b>: Krugs Gasthof ist seit 2019 zu,
+    Reh schenkt nicht aus, Brandholz schließt wegen der Baustelle, und Lindenbräu in Strullendorf
+    ist gar keine Brauerei.</div>
+    <h4>Die fünf der Nordrunde</h4>
+    <ul class="stops">
+      <li><span><b>Hotel Gasthof Höhn</b>, Memmelsdorf — der einzige ohne Ruhetag
+        <em class="own">Höhn</em></span>
+        <span class="when">täglich ab 8 · kein Ruhetag</span></li>
+      <li><span><b>Brauereigasthof Drei Kronen</b>, Memmelsdorf <em class="own">Drei Kronen</em></span>
+        <span class="when">Di–Sa ab 15:30, So ab 12 · <span class="no">Mo zu</span></span></li>
+      <li><span><b>Brauerei Hummel</b>, Merkendorf <em class="own">Hummel</em></span>
+        <span class="when">Mo, Mi–Sa 11–23, So nur bis 14 · <span class="no">Di zu</span></span></li>
+      <li><span><b>Brauerei Wagner</b>, Merkendorf <em class="own">Wagner</em></span>
+        <span class="when">Mi–So 10–23 · <span class="no">Mo, Di zu</span></span></li>
+      <li><span><b>Brauerei Göller</b>, Drosendorf <em class="own">Göller</em></span>
+        <span class="when">Mi–Do ab 15, Fr–So ab 10:30 · <span class="no">Mo, Di zu</span></span></li>
+    </ul>
+    <p><strong>Auf der Nordrunde schenken alle fünf eigenes Bier aus</strong> — hier stimmt das
+    Versprechen also. Die Ausfälle stecken alle in der Südhälfte des Wegs: Krug, Reh und Brandholz.
+    Wer die Dreizehn wirklich will, muss die 34,7-km-Streckentour gehen und dort mit vier
+    Enttäuschungen rechnen.</p>
+    <div class="alert"><b>Wichtig für die Terminwahl:</b> Brauerei Wagner in Merkendorf ist
+    <b>bis einschließlich 15. September</b> im Betriebsurlaub — ab dem 16. wieder offen.
+    Für die übrigen Betriebe ist nichts veröffentlicht — das heißt nicht, dass es keine gibt. Beim Höhnskeller, Griesskeller, Felsenkeller und
+    Schwanenkeller kommt Wetterabhängigkeit dazu.</div>
+    <div class="tags"><span class="tag g">Nordrunde leicht</span><span class="tag a">ausbaubar auf 34,7 km</span>
+      <span class="tag">Schloss Seehof</span><span class="tag">Bierfass-Markierung</span></div>
+    <div class="links">
+      <a href="https://www.fraenkische-schweiz.com/detail/id=5f13fd8bd5e6be051d0a82d3" target="_blank" rel="noopener">Kurze Nordrunde · 12 km, 5 Brauereien, mit Ruhetagen <span class="src">fraenkische-schweiz.com</span></a>
+      <a href="https://www.fraenkische-toskana.com/detail/id=608bd8d7b3b9c342377475ac" target="_blank" rel="noopener">Gesamte Streckentour · 34,7 km mit Einkehrverzeichnis <span class="src">fraenkische-toskana.com</span></a>
+      <a href="https://www.fraenkische-toskana.com/detail/id=62273ca40cd85e04a81cca50" target="_blank" rel="noopener">Südtour · 16 km von der Mitte in den Süden <span class="src">fraenkische-toskana.com</span></a>
+      <a href="https://www.landkreis-bamberg.de/loadDocument.phtml?ObjSvrID=1633&amp;ObjID=6604&amp;ObjLa=1&amp;Ext=PDF" target="_blank" rel="noopener">Landkreis-Flyer 05/2025 · 8 Tourenvorschläge und alle Ruhetage <span class="src">landkreis-bamberg.de · PDF</span></a>
+    </div>
+  </div>
+</article>
+
+<!-- 7 -->
+<article id="aufsess" class="card" data-empf="7" data-km="14" data-brau="4" data-fahrt="115" data-lohr="200"
+         data-tags="kurz">
+  <div class="rank">Der Weltrekord</div>
+  <h2>Brauereienweg Aufseß</h2>
+  <p class="region">Aufseß – Sachsendorf – Hochstahl – Heckenhof · Fränkische Schweiz</p>
+  <div class="badge"><div class="seidla">4</div><small>Brauereien<br>auf 1.300 Einw.</small></div>
+  <dl class="facts">
+    <div class="fact"><dt>Länge</dt><dd>14 km Rundweg</dd></div>
+    <div class="fact"><dt>Gehzeit</dt><dd>ca. 4 h</dd></div>
+    <div class="fact"><dt>Höhenmeter</dt><dd>170 ↑ / 159 ↓</dd></div>
+    <div class="fact"><dt>Schwierigkeit</dt><dd>leicht</dd></div>
+  </dl>
+  <div class="body">
+    <div class="travel">
+      <div class="trip"><span class="k">ab Nürnberg</span><span class="v">
+        Bahn bis Forchheim, <b>agilis RB 22</b> nach Ebermannstadt (~25 Min., Sa/So stündlich),
+        dann <b>Freizeitlinie 230 „Brauereien-Wander-Express"</b>: Ebermannstadt ab 9:00,
+        Aufseß an 9:18. Gesamt knapp <b>2 Stunden</b>. Nur Sa/So/Feiertag, 1. Mai bis 1. November —
+        die 389 fährt <b>nicht</b> nach Aufseß.</span></div>
+      <div class="trip"><span class="k">ab Lohr</span><span class="v">
+        <b>Als Tagestour nicht realistisch.</b> Rund 3 bis 3,5 Stunden reine Anreise, und man muss
+        den <b>einen</b> Bus um 9:00 ab Ebermannstadt erwischen — Abfahrt in Lohr also gegen 5:45.
+        Lohnt nur mit Übernachtung.</span></div>
+    </div>
+    <div class="days">
+      <span class="day good"><b>Bester Tag:</b> Sonntag — alle vier offen, Bus fährt</span>
+      <span class="day bad"><b>Schlechtester:</b> Montag — Stadter zu, kein Bus</span>
+    </div>
+    <p>Vier Brauereien auf rund 1.300 Einwohner: Aufseß steht dafür seit 2000 im
+    <strong>Guinnessbuch der Rekorde</strong> — höchste Brauereidichte der Welt.
+    Der Rundweg lässt sich an jedem Punkt und in jeder Richtung beginnen; die Etappen sind
+    5 – 5 – 2 – 2 km. Mit dem Brauereienwanderpass und vier Stempeln wird man offiziell zum
+    <strong>„Fränkischen Biergenießer"</strong> ernannt, Nichttrinker bekommen eine eigene Urkunde.
+    Unterwegs: Schloss Unteraufseß, Felsformationen und Wacholderheide. Weitere Einkehren gibt es
+    am Rundweg nicht — die vier Brauereigasthöfe sind alles.</p>
+    <h4>Die vier Weltrekord-Brauereien</h4>
+    <ul class="stops">
+      <li><span><b>Brauereigasthof Rothenbach</b>, Aufseß — Startpunkt
+        <em class="own">Aufsesser Brauerei</em></span>
+        <span class="when">10–23 · Mitte Apr–Mitte Okt kein Ruhetag</span></li>
+      <li><span><b>Brauereigasthof Stadter</b>, Sachsendorf <em class="own">Stadter</em></span>
+        <span class="when">Apr–Okt Di–So ab 10 · <span class="no">Mo zu</span>, Di unsicher</span></li>
+      <li><span><b>Brauereigasthof Reichold</b>, Hochstahl <em class="own">Reichold</em></span>
+        <span class="when">Mo–Sa 8–23, So 8–21 · kein Ruhetag</span></li>
+      <li><span><b>Kathi-Bräu</b>, Heckenhof — 300 Freisitze, legendärer Bikertreff,
+        eigene Brennerei <em class="own">Kathi-Bräu</em></span>
+        <span class="when">Apr–Okt Di–Fr 11–21, <span class="no">Sa/So nur 9–19</span></span></li>
+    </ul>
+    <p><strong>Alle vier schenken eigenes Bier aus</strong> — das ist ja gerade der Punkt des
+    Weltrekords. Der sauberste Weg der Liste in dieser Hinsicht, zusammen mit dem Fünf-Seidla-Steig
+    und der Nordrunde des 13-Brauereien-Wegs.</p>
+    <div class="alert"><b>Zwei Timing-Fallen:</b> Kathi-Bräu schließt am Wochenende schon um
+    <b>19 Uhr</b> — also nicht als letzte Station einplanen. Und im Winter ist Kathi-Bräu vom
+    25. Dezember bis 31. Januar komplett zu, sonst nur Fr–So.
+    Bei Rothenbach ist samstagabends in der Saison die Kapazität knapp — lieber mittags hin.
+    Rothenbachs erste Ruhetage liegen am 20. und 27. Oktober, der Betriebsurlaub erst ab
+    16. November; im September ist dort also nichts zu befürchten.</div>
+    <div class="tags"><span class="tag a">Guinness-Weltrekord</span><span class="tag">Wanderpass &amp; Urkunde</span>
+      <span class="tag g">nur mit Freizeitbus erreichbar</span></div>
+    <div class="links">
+      <a href="https://www.aufsess.de/seite/731348/brauereienweg.html" target="_blank" rel="noopener">Gemeinde Aufseß · Brauereienweg, Wanderpass und Urkunde <span class="src">aufsess.de</span></a>
+      <a href="https://www.fraenkische-schweiz.com/detail/id=5f13fdb5d5e6be051d0a8383" target="_blank" rel="noopener">Tourismuszentrale · Tourdaten, Höhenprofil und GPX <span class="src">fraenkische-schweiz.com</span></a>
+      <a href="https://www.noerdliche-fraenkische.de/fileadmin/user_upload/NoerdlicheFraenkische/aufsess_brauereienweg.pdf" target="_blank" rel="noopener">Offizieller Weg-Flyer mit Karte und Etappen <span class="src">noerdliche-fraenkische.de · PDF</span></a>
+      <a href="https://www.vgn.de/freizeit/freizeitlinien/brauereien-wander-express" target="_blank" rel="noopener">Freizeitlinie 230 „Brauereien-Wander-Express" · die einzige Busanbindung <span class="src">vgn.de</span></a>
+    </div>
+  </div>
+</article>
+
+<!-- 7b -->
+<article id="waischenfeld" class="card" data-empf="7.5" data-km="11.5" data-brau="6" data-fahrt="93" data-lohr="225"
+         data-tags="kurz viele">
+  <div class="rank">Der Geheimtipp</div>
+  <h2>Burg- und Bier-Pfad Waischenfeld</h2>
+  <p class="region">Waischenfeld – Nankendorf – Breitenlesau · Wiesenttal, Fränkische Schweiz</p>
+  <div class="badge"><div class="seidla">3</div><small>Brauereien,<br>alle mit Ausschank</small></div>
+  <dl class="facts">
+    <div class="fact"><dt>Länge</dt><dd>11,5 km</dd></div>
+    <div class="fact"><dt>Gehzeit</dt><dd>3:10 h</dd></div>
+    <div class="fact"><dt>Höhenmeter</dt><dd>190 hm</dd></div>
+    <div class="fact"><dt>Schwierigkeit</dt><dd>mittel</dd></div>
+  </dl>
+  <div class="body">
+    <div class="alert"><b>Achtung Namensverwechslung:</b> „Burg- und Bier-Pfad" und
+    „Brauereienweg Waischenfeld" sind <b>zwei verschiedene Wege</b>, obwohl beide teils mit
+    Brauereienweg-Schildern markiert sind. Heckel, Schroll und Krug liegen am
+    <b>Burg- und Bier-Pfad</b> (11,5 km). Der 13-km-„Brauereienweg" der Tourismuszentrale führt
+    in die andere Richtung durchs Ailsbachtal zu Heckel und Held-Bräu in Oberailsfeld.</div>
+    <div class="travel">
+      <div class="trip"><span class="k">ab Nürnberg</span><span class="v">
+        <b>Überraschend gut: 1:33 h mit nur einem Umstieg.</b> RE 30 ab Nürnberg Hbf 7:37 →
+        Pegnitz 8:14, dann <b>Bus 399.1 „Schlösser-Linie"</b> ab 8:21 → Waischenfeld Hauptstraße 9:10.
+        Rückfahrt ab Waischenfeld 11:42 oder <b>17:42</b>. Damit ist Waischenfeld schneller
+        erreichbar als Aufseß.</span></div>
+      <div class="trip"><span class="k">ab Lohr</span><span class="v">
+        Über Würzburg und Nürnberg zur Route oben — grob <b>3:30 bis 4 Stunden</b>.
+        Abfahrt in Lohr gegen 5:40, zurück gegen 21:15. Machbar, aber ein 16-Stunden-Tag ohne Puffer.
+        <b>Mit Übernachtung bei Krug-Bräu deutlich entspannter.</b></span></div>
+    </div>
+    <div class="days">
+      <span class="day good"><b>Bester Tag:</b> Samstag — als einziger Tag alle drei Brauereien offen</span>
+      <span class="day bad"><b>Schlechtester:</b> Montag — <b>alle drei geschlossen</b></span>
+    </div>
+    <p>Drei familiengeführte Brauereien, die alle noch selbst brauen, in einer Landschaft aus
+    Dolomitfelsen und Wiesentmäandern. Start am Wanderparkplatz an der <strong>Burg Waischenfeld</strong>,
+    daneben ragt der <strong>Steinerne Beutel</strong> auf — ein freistehender Felsturm und das
+    Wahrzeichen der Stadt. Über Nankendorf nach Breitenlesau mit seiner 400-jährigen „Russenlinde",
+    zurück über den Stagersgraben. Markierung: gelbes Kreuz, dazu Brauereienweg-Schilder mit
+    Waischenfelder Stadtwappen.</p>
+    <div class="alert"><b>Der Weg lebt von seinen Öffnungszeiten — hier mehr als überall sonst.</b>
+    <b>Heckel schließt samstags schon um 13 Uhr</b>, hat Montag und Donnerstag Ruhetag und öffnet
+    sonst erst ab 16:30. <b>Schroll macht nur noch freitags und samstags auf.</b>
+    Und <b>Krug-Bräu hat bis einschließlich 15. September Sommerurlaub</b> — Gasthof zu,
+    Brauerei läuft weiter. Ab dem 16. September wieder offen. Auf der Website steht keine
+    Jahreszahl dabei, also vorher anrufen: 09202 835. Das gilt auch für die Zimmer.
+    An einem Samstag muss man den Weg deshalb rückwärts denken: erst Heckel am Vormittag, dann los.</div>
+    <h4>Einkehr und Ruhetage</h4>
+    <p class="legend"><span><i class="a"></i> schenkt eigenes Bier aus</span>
+      <span><i class="b"></i> Gasthaus ohne eigene Braustätte</span></p>
+    <ul class="stops">
+      <li><span><b>Brauerei Heckel</b>, Waischenfeld — <b>keine Küche</b>, Brotzeit selbst mitbringen;
+        braut nur etwa monatlich, ca. 300 hl im Jahr <em class="own">Heckel</em></span>
+        <span class="when">Di/Mi/Fr ab 16:30, <span class="no">Sa nur 9:30–13</span>,
+          So 10–13 + ab 16:30 · <span class="no">Mo, Do zu</span></span></li>
+      <li><span><b>Brauerei-Gaststätte Schroll „Zum Weißen Lamm"</b>, Nankendorf — seit 1848,
+        Biergarten, fränkische Brotzeiten <em class="own">Schroll</em></span>
+        <span class="when"><span class="no">nur Fr und Sa</span> ab 9/10 Uhr ·
+          Bierverkauf Mo–Sa 8–19</span></li>
+      <li><span><b>Brauereigasthof Krug (Krug-Bräu)</b>, Breitenlesau — seit 1834, warme Küche,
+        Biergarten mit 250–300 Plätzen, Übernachtung <em class="own">Krug-Bräu</em></span>
+        <span class="when">Mi–Sa 10:30–22, So 10–16 · <span class="no">Mo, Di zu</span></span></li>
+      <li><span><b>Burgschänke Waischenfeld</b> — im Burghof mit Freilichtbühne, direkt am Start
+        <em class="guest">meist die drei Ortsbiere</em></span>
+        <span class="when">Mo/Di/Do–Sa 11:30–22, So ab 10 · <span class="no">Mi zu</span></span></li>
+      <li><span><b>Gasthaus zur Sonne</b>, Waischenfeld — Fachwerkhaus, eigene Brauerei nur bis 1980
+        <em class="guest">kein eigenes Bier</em></span>
+        <span class="when">Do–Sa ab 15, So ab 10 · <span class="no">Mo–Mi zu</span></span></li>
+      <li><span><b>Landhotel Jöbstel</b>, Waischenfeld — Biergarten unter Obstbäumen,
+        Heckel-Bier vom Fass <em class="guest">Heckel</em></span>
+        <span class="when">Zeiten widersprüchlich · Tel. 09202 240</span></li>
+    </ul>
+    <p>In der Kernstadt Waischenfeld braut nur noch Heckel — die <strong>Polsterbräu wurde 2017
+    geschlossen</strong>, das alte Kommunbrauhaus dient als Lager. In der Gesamtgemeinde sind es
+    aber drei: Heckel, Schroll und Krug haben alle die Postadresse 91344 Waischenfeld.</p>
+    <div class="alert"><b>Das lässt sich zur Zwei-Tages-Tour mit Aufseß koppeln.</b>
+    Von Breitenlesau nach Hochstahl sind es zu Fuß <b>4,3 km in gut einer Stunde</b>, von dort
+    weitere 2 km nach Heckenhof zum Kathi-Bräu. Wer nicht laufen will: der <b>Bus 230 verbindet
+    Breitenlesau, Zochenreuth, Hochstahl und Aufseß direkt.</b> Vorschlag: Samstag der
+    Burg- und Bier-Pfad mit Übernachtung bei Krug-Bräu, Sonntag hinüber zu Reichold, Kathi-Bräu
+    und Rothenbach. Schroll muss dabei auf den Samstag, weil sonntags zu.
+    Wer es ganz groß will: der <b>„BierGenuss"-Weitwanderweg</b> über 90,5 km in 3–4 Tagen
+    verbindet alle acht Brauereien beider Wege plus Heiligenstadt.</div>
+    <div class="tags"><span class="tag g">1:33 h ab Nürnberg, 1 Umstieg</span>
+      <span class="tag a">Steinerner Beutel</span><span class="tag">Heckel ohne Küche</span>
+      <span class="tag">Übernachtung bei Krug-Bräu</span></div>
+    <div class="links">
+      <a href="https://www.bierland-franken.de/tourismus_angebote/burg-und-bier-pfad/" target="_blank" rel="noopener">Bierland Franken · Burg- und Bier-Pfad, Wegbeschreibung und Markierung <span class="src">bierland-franken.de</span></a>
+      <a href="https://www.komoot.com/tour/55107395" target="_blank" rel="noopener">Komoot · GPS-Track des Rundwegs, 11,4 km <span class="src">komoot.com</span></a>
+      <a href="https://krug-braeu.de/gasthof/" target="_blank" rel="noopener">Krug-Bräu Breitenlesau · Öffnungszeiten, Sommerurlaub und Zimmer <span class="src">krug-braeu.de</span></a>
+      <a href="https://www.waischenfeld.de/tourismus/sehen-erleben/aktiv/brauerei-kulturwandern/" target="_blank" rel="noopener">Stadt Waischenfeld · geführte Brauerei- und Kulturwanderungen <span class="src">waischenfeld.de</span></a>
+      <a href="https://www.fraenkische-schweiz.com/detail/id=5f13fde8d5e6be051d0a8451" target="_blank" rel="noopener">Zum Vergleich: der andere „Brauereienweg Waischenfeld", 13 km ins Ailsbachtal <span class="src">fraenkische-schweiz.com</span></a>
+      <a href="https://module.tourinfra.com/fraenkische-schweiz/details.php?id=89008" target="_blank" rel="noopener">BierGenuss-Weitwanderweg · 90,5 km, 3–4 Tage, 8 Brauereien <span class="src">tourinfra.com</span></a>
+    </div>
+  </div>
+</article>
+
+<!-- 8 -->
+<article id="heiligenstadt" class="card" data-empf="8" data-km="14.5" data-brau="2" data-fahrt="110" data-lohr="195"
+         data-tags="kurz">
+  <div class="rank">Die anspruchsvollste</div>
+  <h2>Brauereienweg Heiligenstadt</h2>
+  <p class="region">Heiligenstadt – Oberleinleiter – Brunn – Schloss Greifenstein · Leinleitertal</p>
+  <div class="badge"><div class="seidla">2</div><small>Brauereien<br>(3 auf 23 km)</small></div>
+  <dl class="facts">
+    <div class="fact"><dt>Länge</dt><dd>14,5 km</dd></div>
+    <div class="fact"><dt>Gehzeit</dt><dd>ca. 4:15 h</dd></div>
+    <div class="fact"><dt>Höhenmeter</dt><dd>408 hm</dd></div>
+    <div class="fact"><dt>Schwierigkeit</dt><dd>mittel</dd></div>
+  </dl>
+  <div class="body">
+    <div class="travel">
+      <div class="trip"><span class="k">ab Nürnberg</span><span class="v">
+        Wie Aufseß: Bahn bis Forchheim, <b>RB 22</b> nach Ebermannstadt, dann
+        <b>Freizeitlinie 230</b> — Heiligenstadt ist nur 15 Min. entfernt.
+        Werktags fährt alternativ der <b>Bus 221 ab Forchheim ZOB</b> (~39 Min.), Mo–Fr und Sa,
+        aber nicht sonntags.</span></div>
+      <div class="trip"><span class="k">ab Lohr</span><span class="v">
+        Rund <b>3 Stunden</b> über Würzburg und Forchheim nach Ebermannstadt, dann Bus.
+        Wie Aufseß an den einen Morgenbus gebunden — als Tagestour sehr sportlich.</span></div>
+    </div>
+    <div class="alert"><b>Der Sonntag ist praktisch der einzige sinnvolle Tag.</b>
+    Brauerei Ott hat <b>Montag bis Donnerstag geschlossen</b> und öffnet freitags und samstags
+    erst um 17:30 — nur sonntags ist sie tagsüber da (10–16 Uhr, Küche nur bis 14 Uhr).
+    <b>Dienstags haben beide Brauereien zu</b>, dann ist der Weg als Bierweg wertlos.
+    Achtung: die Gemeindeseite nennt für Ott noch veraltete Zeiten — der Brauerei-Website glauben.</div>
+    <div class="days">
+      <span class="day good"><b>Bester Tag:</b> Sonntag — beide offen, Bus fährt</span>
+      <span class="day bad"><b>Schlechtester:</b> Dienstag — <b>null Brauereien</b></span>
+    </div>
+    <p>Weniger Brauereien, dafür das idyllischste Tal der Liste — und mit <strong>408 Höhenmetern
+    die konditionell anspruchsvollste Tour</strong> hier, deutlich mehr als Aufseß.
+    Der Weg folgt der Leinleiter nach Oberleinleiter, führt über Brunn Richtung
+    <strong>Schloss Greifenstein</strong> und steil zurück nach Heiligenstadt. Unterwegs ein
+    Wasser-Lehrpfad mit 19 Tafeln und der Heiligenstädter See mit Kneippanlage.
+    Im Uhrzeigersinn empfohlen.</p>
+    <h4>Einkehr und Ruhetage</h4>
+    <ul class="stops">
+      <li><span><b>Brauerei-Gasthof Ott</b>, Oberleinleiter (km 6) — „Oberladera Göggala",
+        eigene Metzgerei, brauen seit 1678 <em class="own">Ott</em></span>
+        <span class="when">Fr/Sa ab 17:30, So 10–16 · <span class="no">Mo–Do zu</span></span></li>
+      <li><span><b>Brauerei Aichinger · Gasthof Drei Kronen</b>, Heiligenstadt —
+        jedes 7. selbst getrunkene Seidla gratis <em class="own">Aichinger</em></span>
+        <span class="when">Mo, Mi–So 10–22 · <span class="no">Di zu</span></span></li>
+      <li><span><b>Heiligenstadter Hof</b> und weitere Gasthäuser im Ort — Zeiten ungeprüft
+        <em class="guest">kein eigenes Bier</em></span>
+        <span class="when">Ortsmitte, direkt am Weg</span></li>
+    </ul>
+    <p><strong>Beide namensgebenden Stationen schenken eigenes Bier aus</strong> — es sind nur
+    eben nur zwei. Alles andere im Ort ist normale Gastronomie. Genau deshalb ist der Ott-Ruhetag
+    hier so schmerzhaft: fällt er aus, ist von zwei Brauereien nur noch eine übrig.</p>
+    <p>Die <strong>23-km-Variante</strong> führt über den Hugoturm hinüber nach Aufseß und
+    verbindet damit faktisch diesen Weg mit dem Brauereienweg — die dritte Brauerei ist dann
+    Rothenbach. Diese Variante ist allerdings <strong>nicht eigens markiert</strong>.</p>
+    <div class="tags"><span class="tag g">wenig los</span><span class="tag a">jedes 7. Seidla gratis</span>
+      <span class="tag">Schloss Greifenstein</span><span class="tag">Wasser-Lehrpfad</span></div>
+    <div class="links">
+      <a href="https://www.markt-heiligenstadt.de/tourismus/freizeitmoeglichkeiten/brauereienweg.html" target="_blank" rel="noopener">Markt Heiligenstadt · Wegbeschreibung und Sehenswürdigkeiten <span class="src">markt-heiligenstadt.de</span></a>
+      <a href="https://www.fraenkische-schweiz.com/detail/id=5f13fe06d5e6be051d0a84cf" target="_blank" rel="noopener">Tourismuszentrale · Höhenprofil und 23-km-Variante <span class="src">fraenkische-schweiz.com</span></a>
+      <a href="https://www.brauerei-ott.de/gasthaus/" target="_blank" rel="noopener">Brauerei Ott · aktuelle Öffnungszeiten des Gasthauses <span class="src">brauerei-ott.de</span></a>
+      <a href="https://www.vgn.de/freizeit/freizeitlinien/brauereien-wander-express" target="_blank" rel="noopener">Freizeitlinie 230 · Ebermannstadt – Heiligenstadt – Aufseß <span class="src">vgn.de</span></a>
+    </div>
+  </div>
+</article>
+
+<!-- 9 -->
+<article id="bierquellen" class="card" data-empf="9" data-km="18" data-brau="3" data-fahrt="150" data-lohr="230"
+         data-tags="">
+  <div class="rank">Nur noch eingeschränkt</div>
+  <h2>Bierquellen-Wanderweg</h2>
+  <p class="region">Weiglathal – Lindenhardt – Leups – Büchenbach – Trockau · südlich von Bayreuth</p>
+  <div class="badge"><div class="seidla">3</div><small>von ehemals<br>vier Quellen</small></div>
+  <dl class="facts">
+    <div class="fact"><dt>Länge</dt><dd>18 km Rundweg</dd></div>
+    <div class="fact"><dt>Gehzeit</dt><dd>ca. 6 h</dd></div>
+    <div class="fact"><dt>Höhenmeter</dt><dd>453 hm</dd></div>
+    <div class="fact"><dt>Schwierigkeit</dt><dd>mäßig</dd></div>
+  </dl>
+  <div class="body">
+    <div class="alert"><b>Brauerei Herold, Büchenbach: 2025 dauerhaft geschlossen.</b>
+    Die offizielle Wegbeschreibung bestätigt das inzwischen selbst — seither seien „nur" noch drei
+    Brauereigasthöfe am Weg. Herold ist auch aus dem Brauereiverzeichnis der Fränkischen Schweiz
+    verschwunden. <b>Folge: die gesamte Ostschleife Büchenbach – Trockau – Weiglathal, rund 9 km,
+    hat jetzt keine einzige Einkehr mehr.</b></div>
+    <div class="travel">
+      <div class="trip"><span class="k">ab Nürnberg</span><span class="v">
+        <b>Am Wochenende ohne Auto nicht machbar.</b> Der Bus 372 zu den Haltestellen Weiglathal,
+        Lindenhardt und Trockau <b>fährt nur Montag bis Freitag</b> — samstags und sonntags gar nicht.
+        Dazu kommt: die Bahnstrecke Nürnberg–Bayreuth ist zwischen Hersbruck und Neuhaus
+        <b>bis Ende der Sommerferien (ca. 14. September) gesperrt</b>, es fahren Ersatzbusse.</span></div>
+      <div class="trip"><span class="k">ab Lohr</span><span class="v">
+        Über Bamberg und Lichtenfels nach Bayreuth, dann Bus 372 — grob
+        <b>3,5 bis 4 Stunden</b> und nur werktags. <b>Als Tagestour ab Lohr nicht sinnvoll.</b>
+        Frühestens ab Mitte September neu bewerten.</span></div>
+    </div>
+    <div class="days">
+      <span class="day good"><b>Bester Tag:</b> Freitag — der einzige Tag mit allen dreien plus Bus</span>
+      <span class="day bad"><b>Schlechtester:</b> Mo und Di — alle drei geschlossen</span>
+    </div>
+    <p>Der Weg liegt <strong>südlich von Bayreuth Richtung Pegnitz</strong>, beidseits der A9 —
+    nicht, wie oft angenommen, westlich bei Mistelgau. Ruhige, wenig begangene Route durch den
+    Lindenhardter Forst mit den „Sieben Brünnlein", über den Eichetsbühl auf 519 Metern.
+    Er lässt sich in eine Nord- und eine Südschleife teilen. Gläser und Steinkrüge gibt es
+    für 5 beziehungsweise 6,50 Euro bei den Brauereien.</p>
+    <h4>Was übrig ist</h4>
+    <ul class="stops">
+      <li><span><b>Wirtshaus Weiglathal</b> · Brauerei Übelhack — Biergarten mit Spielplatz,
+        keine Reservierung möglich <em class="own">Übelhack</em></span>
+        <span class="when">Mi–So 10–22, Küche bis 20 · <span class="no">Mo, Di zu</span></span></li>
+      <li><span><b>Brauerei Gradl</b>, Leups — Familienbrauerei seit 1683, Kachelofen,
+        überdachter Biergarten <em class="own">Gradl</em></span>
+        <span class="when">Mi–Do ab 15, Fr–So 10–22 · <span class="no">Mo, Di zu</span></span></li>
+      <li><span><b>Brauerei Kürzdörfer</b>, Lindenhardt — nur rund 10 Stunden pro Woche offen
+        <em class="own">Kürzdörfer</em></span>
+        <span class="when">Mi–Fr 16–19:30, Sa 9:30–12 · <span class="no">Mo, Di, So zu</span></span></li>
+      <li class="shut"><span><b>Brauerei Herold</b>, Büchenbach</span>
+        <span class="when"><span class="no">seit 2025 geschlossen</span></span></li>
+    </ul>
+    <p>Alle drei verbliebenen Stationen schenken eigenes Bier aus — aber bei Kürzdörfer ist unklar,
+    ob es eine echte Schankwirtschaft oder überwiegend Bierverkauf ab Haus ist; das Öffnungsmuster
+    (Mi–Fr 16–19:30, Sa vormittags) spricht eher für Zapfstube als für Gastronomie.
+    <strong>Die Website war nicht erreichbar — vorher anrufen.</strong></p>
+    <p><strong>Ehrliche Einschätzung:</strong> entkernt ist der Weg nicht — mit Übelhack und Gradl
+    bleiben zwei vollwertige Brauereigasthöfe mit Küche und Biergarten, und das sind ohnehin die
+    beiden schönsten Stationen. Aber Kürzdörfer lässt sich mit 16 bis 19:30 Uhr kaum in eine
+    Sechs-Stunden-Wanderung einbauen, ohne den ganzen Tag darum herum zu planen.
+    <strong>Realistisch: freitags gegen 10 Uhr in Leups oder Weiglathal starten, mittags Gradl
+    und Übelhack, Lindenhardt nach 16 Uhr als Abschluss.</strong> Oder gleich nur eine der beiden
+    Schleifen gehen.</p>
+    <div class="tags"><span class="tag">Bus nur Mo–Fr</span><span class="tag a">Krüge 6,50 €</span>
+      <span class="tag">Ostschleife ohne Einkehr</span><span class="tag">teilbar in zwei Schleifen</span></div>
+    <div class="links">
+      <a href="https://www.fraenkische-schweiz.com/detail/id=5f13fd8ad5e6be051d0a82cf" target="_blank" rel="noopener">Tourismuszentrale · Wegdaten, Etappen und Hinweis zur Herold-Schließung <span class="src">fraenkische-schweiz.com</span></a>
+      <a href="https://www.vg-mistelbach.de/Rad-und-Wanderwege.n199.html" target="_blank" rel="noopener">VG Mistelbach · Flyer mit Wanderkarte, Gläser und Krüge <span class="src">vg-mistelbach.de</span></a>
+      <a href="https://www.weiglathal.de/" target="_blank" rel="noopener">Wirtshaus Weiglathal · Brauerei Übelhack, Öffnungszeiten <span class="src">weiglathal.de</span></a>
+      <a href="https://www.vgn.de/komfortauskunft/ttb/?lineName=372&amp;exactMatch=1" target="_blank" rel="noopener">VGN-Buslinie 372 · Fahrplan Weiglathal, Lindenhardt, Trockau <span class="src">vgn.de</span></a>
+    </div>
+  </div>
+</article>
+
+</div>
+
+<footer>
+  <h3>Praxis</h3>
+  <p><b>„Seidla" = 0,5 Liter.</b> Küchenschluss ist in fränkischen Brauereigasthöfen früher als
+  erwartet, oft schon zwischen 19 und 20 Uhr. Bargeld einstecken — mehrere Betriebe nehmen
+  ausdrücklich keine Karte. Keller schließen bei Regen, und zwar ohne Ankündigung.
+  Und weil es hier ums Trinken geht: Die Touren stehen bewusst in der Reihenfolge, in der man
+  sie <b>ohne Auto</b> erreicht.</p>
+  <p><b>Tickets ab Lohr:</b> Lohr liegt im NVM, nicht im VGN — ein VGN-TagesTicket allein reicht
+  also nicht. Sinnvoll ist das <b>Bayern-Ticket</b> (34 € für die erste Person, je 10 € für bis zu
+  vier weitere; Sa/So ab 0 Uhr, werktags ab 9 Uhr; gilt in allen Nahverkehrszügen plus U-Bahn und
+  Bus in den Verbünden, aber nicht im ICE) oder das <b>Deutschlandticket</b> für 63 € im Monat.
+  Wer den ICE Würzburg–Nürnberg nutzt, braucht dafür ein separates Ticket.</p>
+  <p><b>Alles telefonisch gegenprüfen, was den Tag trägt.</b> Betriebsurlaube werden von den
+  meisten Betrieben gar nicht online veröffentlicht, und mehrere Tourismusseiten führen
+  nachweislich veraltete Zeiten. Für die kritischen Fälle stehen die Nummern in den verlinkten
+  Quellen.</p>
+  <p style="margin-top:20px">Recherchiert und gegengeprüft für eine Tour im September 2026 · Angaben ohne Gewähr</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  var grid=document.getElementById('grid');
+  var cards=Array.prototype.slice.call(grid.querySelectorAll('.card'));
+  var filters=Array.prototype.slice.call(document.querySelectorAll('[data-f]'));
+  var sorts=Array.prototype.slice.call(document.querySelectorAll('[data-s]'));
+  var countEl=document.getElementById('count');
+  var active={};
+
+  function apply(){
+    var keys=Object.keys(active).filter(function(k){return active[k];});
+    var shown=0;
+    cards.forEach(function(c){
+      var tags=(c.dataset.tags||'').split(/\s+/);
+      var ok=keys.every(function(k){return tags.indexOf(k)>-1;});
+      c.classList.toggle('hide',!ok);
+      if(ok) shown++;
+    });
+    countEl.textContent = shown===cards.length
+      ? cards.length+' Touren'
+      : shown+' von '+cards.length+' Touren';
+  }
+
+  function sortBy(key){
+    var dir = key==='brau' ? -1 : 1;
+    cards.slice().sort(function(a,b){
+      return (parseFloat(a.dataset[key])-parseFloat(b.dataset[key]))*dir;
+    }).forEach(function(c){grid.appendChild(c);});
+  }
+
+  filters.forEach(function(b){
+    b.addEventListener('click',function(){
+      var on=b.getAttribute('aria-pressed')==='true';
+      b.setAttribute('aria-pressed',String(!on));
+      active[b.dataset.f]=!on;
+      apply();
+    });
+  });
+
+  sorts.forEach(function(b){
+    b.addEventListener('click',function(){
+      sorts.forEach(function(o){o.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');
+      sortBy(b.dataset.s);
+    });
+  });
+
+  document.querySelectorAll('nav.toc a').forEach(function(a){
+    a.addEventListener('click',function(){
+      // Filter zuruecksetzen, damit die angesprungene Tour garantiert sichtbar ist
+      filters.forEach(function(b){b.setAttribute('aria-pressed','false');});
+      Object.keys(active).forEach(function(k){active[k]=false;});
+      apply();
+    });
+  });
+
+  apply();
+})();
+</script>
+</body>
+</html>
