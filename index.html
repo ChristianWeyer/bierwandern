@@ -120,7 +120,7 @@
   ul.stops li.shut{opacity:.65}
   ul.stops li.shut b{text-decoration:line-through;text-decoration-thickness:1px}
   ul.stops .when.no{color:var(--red)}
-  em.own,em.guest{font-style:normal;font-size:12px;padding:2px 8px;border-radius:999px;
+  em.own,em.guest{font-style:normal;cursor:help;font-size:12px;padding:2px 8px;border-radius:999px;
     white-space:nowrap;margin-left:6px;display:inline-block;vertical-align:1px;font-weight:600}
   em.own{color:var(--hop);border:1px solid color-mix(in srgb,var(--hop) 45%,transparent);
     background:color-mix(in srgb,var(--hop) 10%,transparent)}
@@ -335,29 +335,29 @@
     Vier Infostationen erklären unterwegs Rohstoffe und Brauprozess. Stempelkarte mitnehmen:
     fünf Stempel ergeben den Steig-Krug zum vergünstigten Preis.</p>
     <h4>Einkehr und Ruhetage</h4>
-    <p class="legend"><span><i class="a"></i> schenkt eigenes Bier aus</span>
-      <span><i class="b"></i> Gasthaus ohne eigene Braustätte</span></p>
+    <p class="legend"><span><i class="a"></i> schenkt eigenes Bier aus (Brauerei im Feld)</span>
+      <span><i class="b"></i> kein eigenes Bier — Gasthaus, Ausschankkeller oder nur Verkauf</span></p>
     <ul class="stops">
       <li><span><b>Klosterbrauerei Weißenohe</b> — Wirtshaus &amp; Biergarten
-        <em class="own">Weißenohe</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Weißenohe">Weißenohe</em></span>
         <span class="when">Fr–Sa 10–21, So 11–20 · <span class="no">Mo–Do zu</span></span></li>
       <li><span><b>Friedmann's Bräustübl</b>, Gräfenberg — seit Dez. 2025 neue Pächter
-        <em class="own">Friedmann</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Friedmann">Friedmann</em></span>
         <span class="when">Mi ab 17, Do–So ab 10/11 · <span class="no">Mo, Di zu</span></span></li>
       <li><span><b>Biergarten zum Bergschlösschen</b>, Gräfenberg — Saison Mai–September
-        <em class="own">Friedmann</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Friedmann">Friedmann</em></span>
         <span class="when">Fr ab 16, Sa/So nachm. · <span class="no">Mo–Do zu</span></span></li>
       <li><span><b>Brauereigasthof Lindenbräu</b>, Gräfenberg — Küche nur bis 19:30
-        <em class="own">Lindenbräu</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Lindenbräu">Lindenbräu</em></span>
         <span class="when">Di–Sa 11–22 · <span class="no">So, Mo zu</span></span></li>
       <li><span><b>Brauereigasthaus Hofmann</b>, Hohenschwärz — nur Barzahlung
-        <em class="own">Hofmann</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Hofmann">Hofmann</em></span>
         <span class="when">Mi, Fr–So 10–21 · <span class="no">Mo, Di, Do zu</span></span></li>
       <li><span><b>Gasthof Seitz – Thuisbrunner Elchbräu</b> — Küche bis 20 Uhr
-        <em class="own">Elchbräu</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Elchbräu">Elchbräu</em></span>
         <span class="when">Di, Fr–So ab 10/11 · <span class="no">Mo, Mi, Do zu</span></span></li>
       <li><span><b>Gasthof Goldener Stiefel</b>, Gräfenberg — seit 2024 griechische Küche
-        <em class="own">Friedmann-Pachtbetrieb</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Friedmann-Pachtbetrieb">Friedmann-Pachtbetrieb</em></span>
         <span class="when">Di–So · <span class="no">Mo zu</span></span></li>
     </ul>
     <p><strong>Hier schenkt jede Station eigenes Bier aus</strong> — das ist der Grund, warum
@@ -420,25 +420,25 @@
     <p class="legend"><span><i class="a"></i> Keller der eigenen Brauerei</span>
       <span><i class="b"></i> Ausschankkeller, schenkt fremdes Bier</span></p>
     <ul class="stops">
-      <li><span><b>Greif Keller</b> — bei Regen geschlossen <em class="own">Greif, Forchheim</em></span>
+      <li><span><b>Greif Keller</b> — bei Regen geschlossen <em class="own" title="Schenkt eigenes Bier aus: Greif, Forchheim">Greif, Forchheim</em></span>
         <span class="when">Mai–Sept Di–So · <span class="no">Mo zu</span> (Winter Mo–Mi)</span></li>
-      <li><span><b>Hebendanz Keller</b> — bei Regen geschlossen <em class="own">Hebendanz, Forchheim</em></span>
+      <li><span><b>Hebendanz Keller</b> — bei Regen geschlossen <em class="own" title="Schenkt eigenes Bier aus: Hebendanz, Forchheim">Hebendanz, Forchheim</em></span>
         <span class="when">nur April–Sept, täglich ab 12</span></li>
       <li><span><b>Schindlerkeller</b> — seit Mai 2026 neue Wirtin, griechisch-fränkisch
-        <em class="guest">Greif</em></span>
+        <em class="guest" title="Kein eigenes Bier — Greif">Greif</em></span>
         <span class="when">Mo–Sa 11–23:30, So ab 10 · kein Ruhetag</span></li>
-      <li><span><b>Glockenkeller</b> <em class="guest">Rittmayer</em></span>
+      <li><span><b>Glockenkeller</b> <em class="guest" title="Kein eigenes Bier — Rittmayer">Rittmayer</em></span>
         <span class="when">Mo/Do/Fr ab 16:30, Sa ab 11, So ab 9:30 · <span class="no">Di zu</span></span></li>
       <li><span><b>Winterbauerkeller</b> — 2025 zu, 2026 wieder offen
-        <em class="guest">Hofmann, Mahrs Bräu</em></span>
+        <em class="guest" title="Kein eigenes Bier — Hofmann, Mahrs Bräu">Hofmann, Mahrs Bräu</em></span>
         <span class="when">Di–Sa 11–21, So 11–15 · <span class="no">Mo zu</span></span></li>
-      <li><span><b>Eichhornkeller</b> — bei Regen geschlossen <em class="guest">Bruno's, Rittmayer</em></span>
+      <li><span><b>Eichhornkeller</b> — bei Regen geschlossen <em class="guest" title="Kein eigenes Bier — Bruno's, Rittmayer">Bruno's, Rittmayer</em></span>
         <span class="when">Ostern–Sept, Mi–So · <span class="no">Mo, Di zu</span></span></li>
       <li><span><b>Stäffala-Keller</b> — Ruhetage widersprüchlich, vorher anrufen
-        <em class="guest">Veldensteiner, Simon</em></span>
+        <em class="guest" title="Kein eigenes Bier — Veldensteiner, Simon">Veldensteiner, Simon</em></span>
         <span class="when">Ende Apr–Ende Aug, Fr–So</span></li>
       <li><span><b>Schweizer Keller</b> — bei km 5,5, nicht im Kellerwald
-        <em class="guest">kein eigenes Bier</em></span>
+        <em class="guest" title="Kein eigenes Bier — kein eigenes Bier">kein eigenes Bier</em></span>
         <span class="when">Mi–Sa 16–21, So 11–21 · <span class="no">Mo, Di zu</span></span></li>
     </ul>
     <p>Forchheim funktioniert anders als die Dorfbrauereien: <strong>die Keller sind überwiegend
@@ -497,32 +497,32 @@
     <strong>Wallfahrtskirche von 1463</strong>. Historisch waren es vier Keller; der vierte,
     Rittmayer Willersdorf, wird seit 1990 nicht mehr betrieben.</p>
     <h4>Einkehr und Ruhetage</h4>
-    <p class="legend"><span><i class="a"></i> schenkt eigenes Bier aus (Brauerei in Klammern)</span>
-      <span><i class="b"></i> Gasthaus ohne eigene Braustätte</span></p>
+    <p class="legend"><span><i class="a"></i> schenkt eigenes Bier aus (Brauerei im Feld)</span>
+      <span><i class="b"></i> kein eigenes Bier — Gasthaus, Ausschankkeller oder nur Verkauf</span></p>
     <ul class="stops">
       <li><span><b>Egloffsteiner Hof</b>, Altendorf — kurz nach dem Start
-        <em class="guest">kein eigenes Bier</em></span>
+        <em class="guest" title="Kein eigenes Bier — kein eigenes Bier">kein eigenes Bier</em></span>
         <span class="when">Mi–So, Sa erst ab 16:30 · <span class="no">Mo, Di zu</span></span></li>
       <li><span><b>Gasthaus Weber</b>, Großbuchfeld — Karpfen Sept–April
-        <em class="guest">kein eigenes Bier</em></span>
+        <em class="guest" title="Kein eigenes Bier — kein eigenes Bier">kein eigenes Bier</em></span>
         <span class="when">Do–So, Sa ab 15 · <span class="no">Mo–Mi zu</span></span></li>
-      <li><span><b>Brauhaus am Kreuzberg</b> (Friedels Keller) <em class="own">Friedel, Schnaid</em></span>
+      <li><span><b>Brauhaus am Kreuzberg</b> (Friedels Keller) <em class="own" title="Schenkt eigenes Bier aus: Friedel, Schnaid">Friedel, Schnaid</em></span>
         <span class="when">27.4.–13.9.: Do–So ab 11 · <span class="no">Mo–Mi zu</span></span></li>
       <li><span><b>Kreuzbergkeller Lieberth</b> — seit 2024 wieder bewirtschaftet
-        <em class="own">Lieberth</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Lieberth">Lieberth</em></span>
         <span class="when">Fr ab 15, Sa/So ab 11 · nur bei schönem Wetter</span></li>
       <li><span><b>Kreuzbergkeller Rittmayer</b> — seit April 2026 neuer Pächter
-        <em class="own">Rittmayer</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Rittmayer">Rittmayer</em></span>
         <span class="when">täglich 11–21 · Ruhetag bei Regen</span></li>
-      <li><span><b>Brauereigasthaus Rittmayer</b>, Hallerndorf <em class="own">Rittmayer</em></span>
+      <li><span><b>Brauereigasthaus Rittmayer</b>, Hallerndorf <em class="own" title="Schenkt eigenes Bier aus: Rittmayer">Rittmayer</em></span>
         <span class="when">Di–Fr ab 16:30, Sa/So 10–22 · <span class="no">Mo zu</span></span></li>
       <li><span><b>Lieberth-Dorfkeller</b> — an der Bushaltestelle Kellerberg
-        <em class="own">Lieberth</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Lieberth">Lieberth</em></span>
         <span class="when">Mitte Apr–Sept, Di/Do/Fr/Sa/So · <span class="no">Mo, Mi zu</span></span></li>
-      <li class="shut"><span><b>Brauerei-Gasthof Roppelt</b>, Stiebarlimbach <em class="own">Roppelt</em></span>
+      <li class="shut"><span><b>Brauerei-Gasthof Roppelt</b>, Stiebarlimbach <em class="own" title="Schenkt eigenes Bier aus: Roppelt">Roppelt</em></span>
         <span class="when"><span class="no">Mai–Ende Sept komplett zu</span> (Kellersaison)</span></li>
       <li><span><b>Roppelt's Keller</b>, Stiebarlimbach — Wild und Karpfen je nach Saison
-        <em class="own">Roppelt</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Roppelt">Roppelt</em></span>
         <span class="when">Mai–Okt, Mo/Di/Fr/Sa ab 11 · <span class="no">Do, So zu</span></span></li>
     </ul>
     <p><strong>Sieben der neun Stationen schenken eigenes Bier aus</strong> — aus vier Brauereien:
@@ -578,24 +578,26 @@
     <strong>nur gegen den Uhrzeigersinn markiert</strong>. Es gibt eine Stempelkarte.
     Drei Brauereien gibt es in Neumarkt noch: Gansbräu, Glossner und Lammsbräu.</p>
     <h4>Einkehr und Ruhetage</h4>
+    <p class="legend"><span><i class="a"></i> schenkt eigenes Bier aus (Brauerei im Feld)</span>
+      <span><i class="b"></i> kein eigenes Bier — Gasthaus, Ausschankkeller oder nur Verkauf</span></p>
     <ul class="stops">
       <li><span><b>Oberer Ganskeller</b> — großer Biergarten, 200–250 Plätze
-        <em class="own">Gansbräu</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Gansbräu">Gansbräu</em></span>
         <span class="when">täglich ab 8:30/9:30 · kein Ruhetag</span></li>
-      <li><span><b>Unterer Ganskeller</b> <em class="own">Gansbräu</em></span>
+      <li><span><b>Unterer Ganskeller</b> <em class="own" title="Schenkt eigenes Bier aus: Gansbräu">Gansbräu</em></span>
         <span class="when">Di–Sa ab 17 · <span class="no">So, Mo zu</span></span></li>
       <li><span><b>Neumarkter Bräustübl</b> — mit Brauereimuseum im Keller
-        <em class="own">Glossner</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Glossner">Glossner</em></span>
         <span class="when">Sa/So/Ft 11–23, sonst ab 17 · <span class="no">Mo, Di evtl. zu</span></span></li>
       <li><span><b>WITTMANNs · Bierbar Hüftgold</b> — direkt am Bahnhof, große Bierauswahl
-        <em class="guest">kein eigenes Bier</em></span>
+        <em class="guest" title="Kein eigenes Bier — kein eigenes Bier">kein eigenes Bier</em></span>
         <span class="when">Mo–Sa 8–23/24 · <span class="no">So nur bis 15</span></span></li>
       <li><span><b>Hotel Schönblick</b> — 14–17 Uhr Mittagspause außer Sa
-        <em class="guest">kein eigenes Bier</em></span>
+        <em class="guest" title="Kein eigenes Bier — kein eigenes Bier">kein eigenes Bier</em></span>
         <span class="when">Mo–So, Sa durchgehend 11–24</span></li>
-      <li><span><b>AlmRefugio</b> (früher Almhof) <em class="guest">kein eigenes Bier</em></span>
+      <li><span><b>AlmRefugio</b> (früher Almhof) <em class="guest" title="Kein eigenes Bier — kein eigenes Bier">kein eigenes Bier</em></span>
         <span class="when">Di–Sa ab 17:30, So 11:30–15 · <span class="no">Mo zu</span></span></li>
-      <li><span><b>Berggasthof Sammüller</b> <em class="guest">kein eigenes Bier</em></span>
+      <li><span><b>Berggasthof Sammüller</b> <em class="guest" title="Kein eigenes Bier — kein eigenes Bier">kein eigenes Bier</em></span>
         <span class="when">Di–Sa 11:30–22, So bis 16:30 · Mo erst ab 17</span></li>
     </ul>
     <p><strong>Nur drei der sieben Stationen schenken eigenes Bier aus</strong> — die beiden
@@ -658,32 +660,34 @@
     und die vielleicht tausendjährige Wendelinus-Eiche. Netto-Abstieg, weil der Start oben liegt
     und das Ziel im Regnitztal. Wer in Lohndorf einsteigt, spart zwei Kilometer.</p>
     <h4>Einkehr und Ruhetage</h4>
+    <p class="legend"><span><i class="a"></i> schenkt eigenes Bier aus (Brauerei im Feld)</span>
+      <span><i class="b"></i> kein eigenes Bier — Gasthaus, Ausschankkeller oder nur Verkauf</span></p>
     <ul class="stops">
       <li><span><b>Brauerei Hönig</b> · Gasthof zur Post, Tiefenellern — direkt am Start
-        <em class="own">Hönig</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Hönig">Hönig</em></span>
         <span class="when">Sa/So ab 10:30, Mo–Fr ab 15 · <span class="no">Do zu</span></span></li>
-      <li><span><b>Brauerei Hölzlein</b>, Lohndorf <em class="own">Hölzlein</em></span>
+      <li><span><b>Brauerei Hölzlein</b>, Lohndorf <em class="own" title="Schenkt eigenes Bier aus: Hölzlein">Hölzlein</em></span>
         <span class="when">Mo/Do/Fr ab 16, Sa/So ab 15 · <span class="no">Di, Mi zu</span></span></li>
-      <li><span><b>Brauerei-Gasthof Griess</b>, Geisfeld <em class="own">Griess</em></span>
+      <li><span><b>Brauerei-Gasthof Griess</b>, Geisfeld <em class="own" title="Schenkt eigenes Bier aus: Griess">Griess</em></span>
         <span class="when">Mo/Do/Fr ab 15, Sa/So auch 10–12 · <span class="no">Di, Mi zu</span></span></li>
       <li><span><b>Griess-Keller</b>, Geisfeld — separater Biergarten, kein Ruhetag
-        <em class="own">Griess</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Griess">Griess</em></span>
         <span class="when">Mitte Apr–Mitte Sept · bei Regen zu</span></li>
-      <li><span><b>Brauerei-Gasthof Sauer</b>, Roßdorf a. Forst <em class="own">Sauer</em></span>
+      <li><span><b>Brauerei-Gasthof Sauer</b>, Roßdorf a. Forst <em class="own" title="Schenkt eigenes Bier aus: Sauer">Sauer</em></span>
         <span class="when">Di–So 11–22 · <span class="no">Mo zu</span></span></li>
-      <li><span><b>Roßdorfer Felsenkeller</b> — Sauers eigener Keller <em class="own">Sauer</em></span>
+      <li><span><b>Roßdorfer Felsenkeller</b> — Sauers eigener Keller <em class="own" title="Schenkt eigenes Bier aus: Sauer">Sauer</em></span>
         <span class="when">Mitte Apr–Mitte Sept, ab 16, So ab 14</span></li>
       <li><span><b>Schwanenkeller</b>, Strullendorf — kurz vor dem Bahnhof
-        <em class="guest">kein eigenes Bier</em></span>
+        <em class="guest" title="Kein eigenes Bier — kein eigenes Bier">kein eigenes Bier</em></span>
         <span class="when">täglich ab 11, Mo ab 16 · <span class="no">Di zu</span></span></li>
       <li class="shut"><span><b>Privatbrauerei Reh</b>, Lohndorf — braut, schenkt aber nicht aus
-        <em class="guest">nur Verkauf</em></span>
+        <em class="guest" title="Kein eigenes Bier — nur Verkauf">nur Verkauf</em></span>
         <span class="when">Mo–Fr, Sa vormittags</span></li>
       <li class="shut"><span><b>Brandholz-Brauerei</b>, Melkendorf — Areal in Sanierung
-        <em class="guest">nur Bieromat</em></span>
+        <em class="guest" title="Kein eigenes Bier — nur Bieromat">nur Bieromat</em></span>
         <span class="when"><span class="no">kein Ausschank</span> · Automat 24/7</span></li>
       <li class="shut"><span><b>Brauerei Krug</b>, Geisfeld — Gasthof seit 2019 zu
-        <em class="guest">nur Flaschenverkauf</em></span>
+        <em class="guest" title="Kein eigenes Bier — nur Flaschenverkauf">nur Flaschenverkauf</em></span>
         <span class="when"><span class="no">Di 18–19, Sa 9–11</span></span></li>
     </ul>
     <p><strong>Sechs Ausschankstellen mit eigenem Bier bleiben</strong>, verteilt auf vier
@@ -741,17 +745,19 @@
     Reh schenkt nicht aus, Brandholz schließt wegen der Baustelle, und Lindenbräu in Strullendorf
     ist gar keine Brauerei.</div>
     <h4>Die fünf der Nordrunde</h4>
+    <p class="legend"><span><i class="a"></i> schenkt eigenes Bier aus (Brauerei im Feld)</span>
+      <span><i class="b"></i> kein eigenes Bier — Gasthaus, Ausschankkeller oder nur Verkauf</span></p>
     <ul class="stops">
       <li><span><b>Hotel Gasthof Höhn</b>, Memmelsdorf — der einzige ohne Ruhetag
-        <em class="own">Höhn</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Höhn">Höhn</em></span>
         <span class="when">täglich ab 8 · kein Ruhetag</span></li>
-      <li><span><b>Brauereigasthof Drei Kronen</b>, Memmelsdorf <em class="own">Drei Kronen</em></span>
+      <li><span><b>Brauereigasthof Drei Kronen</b>, Memmelsdorf <em class="own" title="Schenkt eigenes Bier aus: Drei Kronen">Drei Kronen</em></span>
         <span class="when">Di–Sa ab 15:30, So ab 12 · <span class="no">Mo zu</span></span></li>
-      <li><span><b>Brauerei Hummel</b>, Merkendorf <em class="own">Hummel</em></span>
+      <li><span><b>Brauerei Hummel</b>, Merkendorf <em class="own" title="Schenkt eigenes Bier aus: Hummel">Hummel</em></span>
         <span class="when">Mo, Mi–Sa 11–23, So nur bis 14 · <span class="no">Di zu</span></span></li>
-      <li><span><b>Brauerei Wagner</b>, Merkendorf <em class="own">Wagner</em></span>
+      <li><span><b>Brauerei Wagner</b>, Merkendorf <em class="own" title="Schenkt eigenes Bier aus: Wagner">Wagner</em></span>
         <span class="when">Mi–So 10–23 · <span class="no">Mo, Di zu</span></span></li>
-      <li><span><b>Brauerei Göller</b>, Drosendorf <em class="own">Göller</em></span>
+      <li><span><b>Brauerei Göller</b>, Drosendorf <em class="own" title="Schenkt eigenes Bier aus: Göller">Göller</em></span>
         <span class="when">Mi–Do ab 15, Fr–So ab 10:30 · <span class="no">Mo, Di zu</span></span></li>
     </ul>
     <p><strong>Auf der Nordrunde schenken alle fünf eigenes Bier aus</strong> — hier stimmt das
@@ -810,16 +816,18 @@
     Unterwegs: Schloss Unteraufseß, Felsformationen und Wacholderheide. Weitere Einkehren gibt es
     am Rundweg nicht — die vier Brauereigasthöfe sind alles.</p>
     <h4>Die vier Weltrekord-Brauereien</h4>
+    <p class="legend"><span><i class="a"></i> schenkt eigenes Bier aus (Brauerei im Feld)</span>
+      <span><i class="b"></i> kein eigenes Bier — Gasthaus, Ausschankkeller oder nur Verkauf</span></p>
     <ul class="stops">
       <li><span><b>Brauereigasthof Rothenbach</b>, Aufseß — Startpunkt
-        <em class="own">Aufsesser Brauerei</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Aufsesser Brauerei">Aufsesser Brauerei</em></span>
         <span class="when">10–23 · Mitte Apr–Mitte Okt kein Ruhetag</span></li>
-      <li><span><b>Brauereigasthof Stadter</b>, Sachsendorf <em class="own">Stadter</em></span>
+      <li><span><b>Brauereigasthof Stadter</b>, Sachsendorf <em class="own" title="Schenkt eigenes Bier aus: Stadter">Stadter</em></span>
         <span class="when">Apr–Okt Di–So ab 10 · <span class="no">Mo zu</span>, Di unsicher</span></li>
-      <li><span><b>Brauereigasthof Reichold</b>, Hochstahl <em class="own">Reichold</em></span>
+      <li><span><b>Brauereigasthof Reichold</b>, Hochstahl <em class="own" title="Schenkt eigenes Bier aus: Reichold">Reichold</em></span>
         <span class="when">Mo–Sa 8–23, So 8–21 · kein Ruhetag</span></li>
       <li><span><b>Kathi-Bräu</b>, Heckenhof — 300 Freisitze, legendärer Bikertreff,
-        eigene Brennerei <em class="own">Kathi-Bräu</em></span>
+        eigene Brennerei <em class="own" title="Schenkt eigenes Bier aus: Kathi-Bräu">Kathi-Bräu</em></span>
         <span class="when">Apr–Okt Di–Fr 11–21, <span class="no">Sa/So nur 9–19</span></span></li>
     </ul>
     <p><strong>Alle vier schenken eigenes Bier aus</strong> — das ist ja gerade der Punkt des
@@ -890,28 +898,28 @@
     Jahreszahl dabei, also vorher anrufen: 09202 835. Das gilt auch für die Zimmer.
     An einem Samstag muss man den Weg deshalb rückwärts denken: erst Heckel am Vormittag, dann los.</div>
     <h4>Einkehr und Ruhetage</h4>
-    <p class="legend"><span><i class="a"></i> schenkt eigenes Bier aus</span>
-      <span><i class="b"></i> Gasthaus ohne eigene Braustätte</span></p>
+    <p class="legend"><span><i class="a"></i> schenkt eigenes Bier aus (Brauerei im Feld)</span>
+      <span><i class="b"></i> kein eigenes Bier — Gasthaus, Ausschankkeller oder nur Verkauf</span></p>
     <ul class="stops">
       <li><span><b>Brauerei Heckel</b>, Waischenfeld — <b>keine Küche</b>, Brotzeit selbst mitbringen;
-        braut nur etwa monatlich, ca. 300 hl im Jahr <em class="own">Heckel</em></span>
+        braut nur etwa monatlich, ca. 300 hl im Jahr <em class="own" title="Schenkt eigenes Bier aus: Heckel">Heckel</em></span>
         <span class="when">Di/Mi/Fr ab 16:30, <span class="no">Sa nur 9:30–13</span>,
           So 10–13 + ab 16:30 · <span class="no">Mo, Do zu</span></span></li>
       <li><span><b>Brauerei-Gaststätte Schroll „Zum Weißen Lamm"</b>, Nankendorf — seit 1848,
-        Biergarten, fränkische Brotzeiten <em class="own">Schroll</em></span>
+        Biergarten, fränkische Brotzeiten <em class="own" title="Schenkt eigenes Bier aus: Schroll">Schroll</em></span>
         <span class="when"><span class="no">nur Fr und Sa</span> ab 9/10 Uhr ·
           Bierverkauf Mo–Sa 8–19</span></li>
       <li><span><b>Brauereigasthof Krug (Krug-Bräu)</b>, Breitenlesau — seit 1834, warme Küche,
-        Biergarten mit 250–300 Plätzen, Übernachtung <em class="own">Krug-Bräu</em></span>
+        Biergarten mit 250–300 Plätzen, Übernachtung <em class="own" title="Schenkt eigenes Bier aus: Krug-Bräu">Krug-Bräu</em></span>
         <span class="when">Mi–Sa 10:30–22, So 10–16 · <span class="no">Mo, Di zu</span></span></li>
       <li><span><b>Burgschänke Waischenfeld</b> — im Burghof mit Freilichtbühne, direkt am Start
-        <em class="guest">meist die drei Ortsbiere</em></span>
+        <em class="guest" title="Kein eigenes Bier — meist die drei Ortsbiere">meist die drei Ortsbiere</em></span>
         <span class="when">Mo/Di/Do–Sa 11:30–22, So ab 10 · <span class="no">Mi zu</span></span></li>
       <li><span><b>Gasthaus zur Sonne</b>, Waischenfeld — Fachwerkhaus, eigene Brauerei nur bis 1980
-        <em class="guest">kein eigenes Bier</em></span>
+        <em class="guest" title="Kein eigenes Bier — kein eigenes Bier">kein eigenes Bier</em></span>
         <span class="when">Do–Sa ab 15, So ab 10 · <span class="no">Mo–Mi zu</span></span></li>
       <li><span><b>Landhotel Jöbstel</b>, Waischenfeld — Biergarten unter Obstbäumen,
-        Heckel-Bier vom Fass <em class="guest">Heckel</em></span>
+        Heckel-Bier vom Fass <em class="guest" title="Kein eigenes Bier — Heckel">Heckel</em></span>
         <span class="when">Zeiten widersprüchlich · Tel. 09202 240</span></li>
     </ul>
     <p>In der Kernstadt Waischenfeld braut nur noch Heckel — die <strong>Polsterbräu wurde 2017
@@ -979,15 +987,17 @@
     Wasser-Lehrpfad mit 19 Tafeln und der Heiligenstädter See mit Kneippanlage.
     Im Uhrzeigersinn empfohlen.</p>
     <h4>Einkehr und Ruhetage</h4>
+    <p class="legend"><span><i class="a"></i> schenkt eigenes Bier aus (Brauerei im Feld)</span>
+      <span><i class="b"></i> kein eigenes Bier — Gasthaus, Ausschankkeller oder nur Verkauf</span></p>
     <ul class="stops">
       <li><span><b>Brauerei-Gasthof Ott</b>, Oberleinleiter (km 6) — „Oberladera Göggala",
-        eigene Metzgerei, brauen seit 1678 <em class="own">Ott</em></span>
+        eigene Metzgerei, brauen seit 1678 <em class="own" title="Schenkt eigenes Bier aus: Ott">Ott</em></span>
         <span class="when">Fr/Sa ab 17:30, So 10–16 · <span class="no">Mo–Do zu</span></span></li>
       <li><span><b>Brauerei Aichinger · Gasthof Drei Kronen</b>, Heiligenstadt —
-        jedes 7. selbst getrunkene Seidla gratis <em class="own">Aichinger</em></span>
+        jedes 7. selbst getrunkene Seidla gratis <em class="own" title="Schenkt eigenes Bier aus: Aichinger">Aichinger</em></span>
         <span class="when">Mo, Mi–So 10–22 · <span class="no">Di zu</span></span></li>
       <li><span><b>Heiligenstadter Hof</b> und weitere Gasthäuser im Ort — Zeiten ungeprüft
-        <em class="guest">kein eigenes Bier</em></span>
+        <em class="guest" title="Kein eigenes Bier — kein eigenes Bier">kein eigenes Bier</em></span>
         <span class="when">Ortsmitte, direkt am Weg</span></li>
     </ul>
     <p><strong>Beide namensgebenden Stationen schenken eigenes Bier aus</strong> — es sind nur
@@ -1047,15 +1057,17 @@
     Er lässt sich in eine Nord- und eine Südschleife teilen. Gläser und Steinkrüge gibt es
     für 5 beziehungsweise 6,50 Euro bei den Brauereien.</p>
     <h4>Was übrig ist</h4>
+    <p class="legend"><span><i class="a"></i> schenkt eigenes Bier aus (Brauerei im Feld)</span>
+      <span><i class="b"></i> kein eigenes Bier — Gasthaus, Ausschankkeller oder nur Verkauf</span></p>
     <ul class="stops">
       <li><span><b>Wirtshaus Weiglathal</b> · Brauerei Übelhack — Biergarten mit Spielplatz,
-        keine Reservierung möglich <em class="own">Übelhack</em></span>
+        keine Reservierung möglich <em class="own" title="Schenkt eigenes Bier aus: Übelhack">Übelhack</em></span>
         <span class="when">Mi–So 10–22, Küche bis 20 · <span class="no">Mo, Di zu</span></span></li>
       <li><span><b>Brauerei Gradl</b>, Leups — Familienbrauerei seit 1683, Kachelofen,
-        überdachter Biergarten <em class="own">Gradl</em></span>
+        überdachter Biergarten <em class="own" title="Schenkt eigenes Bier aus: Gradl">Gradl</em></span>
         <span class="when">Mi–Do ab 15, Fr–So 10–22 · <span class="no">Mo, Di zu</span></span></li>
       <li><span><b>Brauerei Kürzdörfer</b>, Lindenhardt — nur rund 10 Stunden pro Woche offen
-        <em class="own">Kürzdörfer</em></span>
+        <em class="own" title="Schenkt eigenes Bier aus: Kürzdörfer">Kürzdörfer</em></span>
         <span class="when">Mi–Fr 16–19:30, Sa 9:30–12 · <span class="no">Mo, Di, So zu</span></span></li>
       <li class="shut"><span><b>Brauerei Herold</b>, Büchenbach</span>
         <span class="when"><span class="no">seit 2025 geschlossen</span></span></li>
