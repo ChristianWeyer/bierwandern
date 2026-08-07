@@ -31,6 +31,8 @@
   .byline{margin:8px 0 0;color:var(--dim);font-size:14.5px}
   .byline b{color:var(--gold);font-weight:600}
   .byline span{color:var(--dim);opacity:.8}
+  .byline time{border-bottom:1px dotted var(--line2)}
+  #age.stale{color:var(--amber);opacity:1;font-weight:600}
 
   .note{background:var(--bg2);border:1px solid var(--line);border-radius:11px;
     margin:0 0 11px;font-size:16px;color:var(--mut)}
@@ -168,10 +170,12 @@
   Aischgrund und Oberpfälzer Jura — alle mit Bahn und Bus erreichbar. Jede Einkehr einzeln
   gegengeprüft: Öffnungszeiten, Ruhetage, Betriebsurlaube und dauerhafte Schließungen.
   Anreise jeweils ab Nürnberg Hbf und ab Lohr (Main) Bahnhof.</p>
-  <p class="meta"><b>Stand: Montag, 3. August 2026</b> · geplant für <b>Samstag, 19. September 2026</b> ·
+  <p class="meta"><b>Zuletzt aktualisiert: Freitag, 7. August 2026</b> ·
+  geplant für <b>Samstag, 19. September 2026</b> ·
   Nürnberg und Bamberg als Drehscheiben · alle Wege außer dem Bierquellenweg im VGN-Gebiet</p>
-  <p class="byline">Recherchiert und zusammengestellt von <b>Christian Weyer</b>
-  und <b>Claude</b> <span>· die Quellen stehen bei jeder Tour, die Telefonnummern auch</span></p>
+  <p class="byline">Recherchiert und zusammengestellt von <b>Christian Weyer</b> und <b>Claude</b>
+  <span>· Öffnungszeiten geprüft am <time id="checked" datetime="2026-08-03">3. August 2026</time><span id="age"></span>
+  · die Quellen und Telefonnummern stehen bei jeder Tour</span></p>
 </header>
 
 <details class="note info" style="border-left-color:var(--hop)" open>
@@ -1147,7 +1151,7 @@
   meisten Betrieben gar nicht online veröffentlicht, und mehrere Tourismusseiten führen
   nachweislich veraltete Zeiten. Für die kritischen Fälle stehen die Nummern in den verlinkten
   Quellen.</p>
-  <p style="margin-top:20px">Recherchiert und gegengeprüft für eine Tour im September 2026 · Angaben ohne Gewähr</p>
+  <p style="margin-top:20px">Öffnungszeiten, Ruhetage und Verbindungen recherchiert am 3. August 2026 · Angaben ohne Gewähr</p>
 </footer>
 </div>
 
@@ -1206,6 +1210,17 @@
       apply();
     });
   });
+
+  // Alter der Recherche selbst ausweisen, damit die Angabe nicht still veraltet
+  (function(){
+    var t=document.getElementById('checked'), a=document.getElementById('age');
+    if(!t||!a) return;
+    var d=new Date(t.getAttribute('datetime')+'T12:00:00');
+    var tage=Math.floor((Date.now()-d.getTime())/86400000);
+    if(isNaN(tage)||tage<1) return;
+    a.textContent = tage===1 ? ' (vor 1 Tag)' : ' (vor '+tage+' Tagen)';
+    if(tage>60){ a.className='stale'; a.textContent+=' — Öffnungszeiten vor der Tour neu prüfen'; }
+  })();
 
   apply();
 })();
