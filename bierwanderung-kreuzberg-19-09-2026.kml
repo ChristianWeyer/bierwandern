@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Bierwanderung Kreuzberg – Sa 19.09.2026</name>
+  <description>Alle Brauereien, Keller und Gasthöfe im Umkreis der Tour. Stand 18.09.2026.
+Grün = eigenes Bier, am Weg. Gelb = eigenes Bier, aber abseits. Grau = kein eigenes Bier.
+Rot = geschlossen. Blau = Verkehr.
+Keine Linien in dieser Datei — den echten Wegverlauf als zweite Ebene importieren (VGN-Tourdaten, Link in der Beschreibung).</description>
+
+  <Style id="own"><IconStyle><scale>1.1</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/paddle/grn-blank.png</href></Icon></IconStyle></Style>
+  <Style id="off"><IconStyle><scale>1.0</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-blank.png</href></Icon></IconStyle></Style>
+  <Style id="guest"><IconStyle><scale>1.0</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle></Style>
+  <Style id="shut"><IconStyle><scale>1.0</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-blank.png</href></Icon></IconStyle></Style>
+  <Style id="transit"><IconStyle><scale>1.0</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href></Icon></IconStyle></Style>
+
+  <Folder>
+    <name>Am Kreuzberg — drei Keller, drei Brauereien, 80 Meter</name>
+    <Placemark><styleUrl>#own</styleUrl><name>1 · Brauhaus am Kreuzberg (Friedels Keller)</name>
+      <description><![CDATA[<b>Friedel-Bier</b>, hauseigene Brauerei der Familie Friedel-Winkelmann.
+Bis zu zehn Biere vom Fass, dazu Craft- und holzfassgereifte Biere.<br>
+<b>Sa 19.09.: ab 11 Uhr</b> (Herbstsaison 14.09.–11.10., Fr–So)<br>
+Kreuzberg 1 · 09545 4736]]></description>
+      <Point><coordinates>10.9554812,49.7590213,0</coordinates></Point></Placemark>
+    <Placemark><styleUrl>#own</styleUrl><name>2 · Lieberth's Keller am Kreuzberg</name>
+      <description><![CDATA[<b>Lieberth</b>, Hallerndorf<br>
+<b>Sa 19.09.: ab 11 Uhr</b> — nur bei schönem Wetter (Prognose: trocken, sonnig, 20 Grad)<br>
+Kreuzberg 2 · 09545 70746]]></description>
+      <Point><coordinates>10.9548434,49.7593182,0</coordinates></Point></Placemark>
+    <Placemark><styleUrl>#own</styleUrl><name>3 · Rittmayer-Keller am Kreuzberg</name>
+      <description><![CDATA[<b>Rittmayer Landbier</b>, Hallerndorf. Oberster der drei Keller.<br>
+<b>Sa 19.09.: 11–21 Uhr</b> — bei Regen zu<br>
+Kreuzberg 3 · 0151 58559325]]></description>
+      <Point><coordinates>10.954413,49.759331,0</coordinates></Point></Placemark>
+  </Folder>
+
+  <Folder>
+    <name>Hallerndorf und Stiebarlimbach</name>
+    <Placemark><styleUrl>#own</styleUrl><name>4 · Brauereigaststätte Rittmayer, Hallerndorf</name>
+      <description><![CDATA[<b>Rittmayer</b>, eigene Brauerei<br>
+<b>Sa 19.09.: 10–22 Uhr</b> — warme Küche, Küchenschluss früh<br>
+Trailsdorfer Str. 4 · 09545 509214]]></description>
+      <Point><coordinates>10.9827175,49.7597757,0</coordinates></Point></Placemark>
+    <Placemark><styleUrl>#own</styleUrl><name>5 · Dorfkeller Lieberth, Hallerndorf</name>
+      <description><![CDATA[<b>Lieberth</b>, eigene Brauerei<br>
+<b>Sa 19.09.: offen</b> (Saison Mitte April–September, Ruhetag Mo und Mi)<br>
+<b>Direkt an der Bushaltestelle Kellerberg</b> — hier steigt ihr um 11:03 aus.<br>
+Kreuzbergstr. 17 · 09545 4437373]]></description>
+      <Point><coordinates>10.9786995,49.7572742,0</coordinates></Point></Placemark>
+    <Placemark><styleUrl>#own</styleUrl><name>6 · Bierkeller Roppelt, Stiebarlimbach</name>
+      <description><![CDATA[<b>Stiebarlimbacher Kellerbier</b>, Brauerei Roppelt<br>
+<b>Sa 19.09.: ab 11 Uhr</b> — Ruhetag Do und So, bei schlechtem Wetter zu<br>
+<b>14 Gehminuten vom Kreuzberg (1,0 km).</b> Der Brauerei-Gasthof im Ort bleibt zu (Kellersaison bis Ende September).<br>
+Stiebarlimbach 9 · 09195 7263]]></description>
+      <Point><coordinates>10.9473726,49.7554997,0</coordinates></Point></Placemark>
+    <Placemark><styleUrl>#off</styleUrl><name>Gartenkeller Rittmayer, Hallerndorf</name>
+      <description><![CDATA[Zweiter Rittmayer-Keller im Ort. <b>Öffnungszeiten nicht belegt</b> — vorher anrufen.<br>
+Am Gartenkeller 2 · 0175 8381367]]></description>
+      <Point><coordinates>10.9752774,49.7591458,0</coordinates></Point></Placemark>
+  </Folder>
+
+  <Folder>
+    <name>Buttenheim — zwei weitere Brauereien am Bahnhof</name>
+    <Placemark><styleUrl>#own</styleUrl><name>7 · Löwenbräukeller Buttenheim</name>
+      <description><![CDATA[<b>Löwenbräu Buttenheim</b> (Johann Modschiedler), eigene Brauerei<br>
+<b>Sa 19.09.: 11–22 Uhr</b>, Küche 11–14 und 16:30–20:30<br>
+<b>Nur Barzahlung.</b> Rund 1,4 km östlich des Bahnhofs.<br>
+Eremitage 3 · 09545 509346]]></description>
+      <Point><coordinates>11.0334053,49.7996483,0</coordinates></Point></Placemark>
+    <Placemark><styleUrl>#own</styleUrl><name>8 · St. GeorgenBräu Bierkeller, Buttenheim</name>
+      <description><![CDATA[<b>St. GeorgenBräu</b>, Familienbrauerei seit 1624<br>
+<b>Sa 19.09.: ab 11 Uhr</b> — Saison Ende April bis Mitte Oktober, nur bei schönem Wetter<br>
+Kellerstraße · 0151 18020990]]></description>
+      <Point><coordinates>11.0368917,49.8000755,0</coordinates></Point></Placemark>
+    <Placemark><styleUrl>#own</styleUrl><name>9 · Brauerei-Gasthof Löwenbräu, Buttenheim</name>
+      <description><![CDATA[<b>Löwenbräu Buttenheim</b>, der Gasthof zur Brauerei<br>
+<b>Sa 19.09.: 10–22 Uhr</b>, warme Küche 11:30–14 und 16:30–19:30<br>
+Marktstraße 8 · 09545 332]]></description>
+      <Point><coordinates>11.0314479,49.8017009,0</coordinates></Point></Placemark>
+    <Placemark><styleUrl>#transit</styleUrl><name>Bahnhof Buttenheim</name>
+      <description><![CDATA[<b>S1 nach Nürnberg:</b> 21:33 (an 22:19), 22:24, 01:11, 02:11.<br>
+Hinfahrt morgens: S1 ab Nürnberg Hbf zur Minute :41.]]></description>
+      <Point><coordinates>11.0136394,49.7997175,0</coordinates></Point></Placemark>
+  </Folder>
+
+  <Folder>
+    <name>Abseits des Wegs — lohnen einen eigenen Tag</name>
+    <Placemark><styleUrl>#off</styleUrl><name>Brauerei-Gaststätte Witzgall, Schlammersdorf</name>
+      <description><![CDATA[<b>Witzgall</b>, eigenes Vollbier und unfiltriertes Landbier vom Fass<br>
+<b>Sa 19.09.: offen ab 9 Uhr</b> — Ruhetag Di, Do, So und Feiertage<br>
+<b>Keine Speisen</b> — eigene Brotzeit ist ausdrücklich erlaubt.<br>
+Schlammersdorfer Str. 17 · 09545 7452]]></description>
+      <Point><coordinates>11.0054514,49.7691502,0</coordinates></Point></Placemark>
+    <Placemark><styleUrl>#off</styleUrl><name>Landgasthof Hotel Rittmayer, Willersdorf</name>
+      <description><![CDATA[Bier wird bei der <b>Brauerei Lieberth</b> gebraut. Naturland-Betrieb mit
+eigenen Karpfenteichen.<br>
+<b>Sa 19.09.: 11:30–16 und ab 17 Uhr</b><br>
+Willersdorf 108 · 09195 94730]]></description>
+      <Point><coordinates>10.9618545,49.7441003,0</coordinates></Point></Placemark>
+    <Placemark><styleUrl>#off</styleUrl><name>Kellerwaldschänke Lunz, Willersdorf</name>
+      <description><![CDATA[<b>Öffnungszeiten nicht belegt</b> — vorher anrufen.<br>
+Willersdorf 273 · 09195 3271]]></description>
+      <Point><coordinates>10.9705553,49.7377204,0</coordinates></Point></Placemark>
+  </Folder>
+
+  <Folder>
+    <name>Ohne eigenes Bier / geschlossen</name>
+    <Placemark><styleUrl>#guest</styleUrl><name>Gasthaus Weber, Großbuchfeld</name>
+      <description><![CDATA[Kein eigenes Bier; welche Brauerei ausgeschenkt wird, ist nicht dokumentiert.<br>
+<b>Sa 19.09.: ab 15 Uhr</b> — telefonisch bestätigt am 18.09.<br>
+Einzige Einkehr zwischen Kreuzberg und Buttenheim.<br>
+Großbuchfeld 11 · 09543 7471]]></description>
+      <Point><coordinates>10.9653296,49.7813486,0</coordinates></Point></Placemark>
+    <Placemark><styleUrl>#shut</styleUrl><name>Egloffsteiner Hof, Altendorf — GESCHLOSSEN</name>
+      <description><![CDATA[<b>Am 19.09.2026 geschlossen.</b> Betriebsurlaub, ab 23.09. wieder geöffnet.
+Telefonisch bestätigt am 18.09.2026.<br>
+Egloffsteiner Ring 2 · 09545 313]]></description>
+      <Point><coordinates>11.0101703,49.7976575,0</coordinates></Point></Placemark>
+  </Folder>
+
+  <Folder>
+    <name>Verkehr</name>
+    <Placemark><styleUrl>#transit</styleUrl><name>Bushaltestelle Kellerberg — Ankunft 11:03</name>
+      <description><![CDATA[<b>Hin:</b> ab Nürnberg Hbf 09:41 (S1, Umstieg Forchheim auf Bus 265), an 11:03.<br>
+<b>Zurück Richtung Forchheim ZOB:</b> 10:24, 11:24, 12:24, 13:24, 14:24, 15:24, 16:24, 17:24,
+dann <b>19:28</b> und <b>21:16</b>. Nach 17:24 fast zwei Stunden nichts.<br>
+Danach nur Anrufsammeltaxi 22:52 und 00:52 — Anmeldung mind. 1 Std. vorher oder am Vortag:
+<b>09191 862511</b>, Zuschlag fällig.]]></description>
+      <Point><coordinates>10.9786995,49.7572742,0</coordinates></Point></Placemark>
+  </Folder>
+</Document>
+</kml>
