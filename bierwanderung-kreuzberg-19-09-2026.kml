@@ -20,15 +20,18 @@
   <Style id="spur"><LineStyle><color>ff2dc65a</color><width>4</width></LineStyle></Style>
 
   <Folder><name>1 · Ankunft und Hallerndorf, ab 11:03</name>
-    <Placemark><styleUrl>#own</styleUrl><name>1 · Dorfkeller Lieberth — erstes Seidla, 11:05</name>
+    <Placemark><styleUrl>#own</styleUrl><name>1 · Dorfkeller Lieberth — SAMSTAGS ERST AB 15 UHR</name>
       <description><![CDATA[<b>Lieberth</b>, eigene Brauerei. Liegt direkt an der Bushaltestelle
-Kellerberg, wo ihr um 11:03 aussteigt.<br>
-<b>Sa offen</b> (Saison Mitte April–September, Ruhetag Mo und Mi)<br>
+Kellerberg, wo ihr um 11:03 aussteigt — <b>hat um diese Zeit aber noch zu.</b><br>
+<b>Sa 15:00–22:00</b> (Saison Mitte April–Ende September, Ruhetag Mo und Mi).
+Vormittags also nichts: direkt zum Kreuzberg hoch.<br>
 Kreuzbergstr. 17 · 09545 4437373]]></description>
       <Point><coordinates>10.9786995,49.7572742,0</coordinates></Point></Placemark>
-    <Placemark><styleUrl>#own</styleUrl><name>2 · Brauereigaststätte Rittmayer — Mittagessen, 11:50</name>
+    <Placemark><styleUrl>#own</styleUrl><name>2 · Brauereigaststätte Rittmayer — ZEITEN UNKLAR, anrufen</name>
       <description><![CDATA[<b>Rittmayer</b>, eigene Brauerei. Zehn Minuten weiter im Ort.<br>
-<b>Sa 10–22</b>, warme Küche — hier essen, Küchenschluss kommt früh.<br>
+<b>Widerspruch:</b> Brauerei-Website nennt <b>Sa/So 10–22</b>, der von der Wirtin gepflegte
+Google-Eintrag dagegen <b>Sa 16:30–22:30</b>. Vorher anrufen — davon hängt ab, ob der Vormittag
+im Ort oder direkt am Berg stattfindet. Warme Küche.<br>
 Trailsdorfer Str. 4 · 09545 509214]]></description>
       <Point><coordinates>10.9827175,49.7597757,0</coordinates></Point></Placemark>
   </Folder>
@@ -73,8 +76,7 @@ Eremitage 3]]></description>
       <Point><coordinates>11.0334053,49.7996483,0</coordinates></Point></Placemark>
     <Placemark><styleUrl>#own</styleUrl><name>8 · St. GeorgenBräu Bierkeller</name>
       <description><![CDATA[<b>St. GeorgenBräu</b>, Familienbrauerei seit 1624<br>
-<b>Sa ab 11</b> — Saison Ende April bis Mitte Oktober, nur bei schönem Wetter.
-<b>Schließzeit nicht veröffentlicht.</b><br>
+<b>Sa 11:00–22:00</b> — Saison Ende April bis Mitte Oktober, nur bei schönem Wetter.<br>
 Rund 1,8 km östlich des Bahnhofs. Kellerstraße · 0151 18020990]]></description>
       <Point><coordinates>11.0368917,49.8000755,0</coordinates></Point></Placemark>
     <Placemark><styleUrl>#own</styleUrl><name>9 · Brauerei-Gasthof Löwenbräu</name>
@@ -92,9 +94,12 @@ Marktstraße 8 · 09545 332]]></description>
     <Placemark><styleUrl>#fork</styleUrl>
       <name>Ab 17 Uhr in Stiebarlimbach: drei Fortsetzungen</name>
       <description><![CDATA[<b>Gemeinsamer Vormittag (Marker 1 bis 6):</b> ab Nürnberg Hbf 09:41,
-Umstieg Forchheim, an Kellerberg 11:03. Dorfkeller Lieberth 11:05 → Brauereigaststätte Rittmayer
-11:50 → Aufstieg 12:55 → Kreuzberg 13:30–15:15 → Bierkeller Roppelt 15:30–17:00.
-<b>Vier Brauereien, rund 4 km.</b><br><br>
+Umstieg Forchheim, an Kellerberg 11:03. <b>Im Ort ist vormittags nichts offen</b> (Dorfkeller erst
+ab 15, Gartenkeller Sa Ruhetag, Gasthof Lieberth Sa zu) → Aufstieg 11:05–11:45 →
+Kreuzberg 11:45–15:15 → Bierkeller Roppelt 15:30–17:00.
+<b>Vier Brauereien, rund 4 km.</b><br>
+Falls die Brauereigaststätte Rittmayer doch ab 10 offen hat (anrufen): dort 11:15–12:20 essen,
+dann hoch, ab 13 Uhr am Berg.<br><br>
 
 <b>DIE KLUGE — Empfehlung.</b> Rund 4 km zu Fuß, sechs Brauereien.<br>
 Direkt in <b>Stiebarlimbach um 17:06</b> einsteigen, <b>an Buttenheim 18:25</b>. Kein Rückweg
@@ -112,9 +117,10 @@ Ab Roppelt gegen 16:00 zurück über den Kreuzberg, 3 km zum Gasthaus Weber in G
 Im Westen bleiben und direkt heim: ab Stiebarlimbach 19:06 (an Nürnberg 20:48) oder 21:08
 (an 22:19); ab Kellerberg 19:28 oder 21:16 (an 22:19).<br><br>
 
-<b>Schließzeiten:</b> belegt sind nur Rittmayer-Keller bis 21, Brauereigaststätte Rittmayer bis 22
-und die Buttenheimer bis 22. Friedels Keller, Lieberth's Keller, St. GeorgenBräu und Roppelt
-nennen keine Schließzeit.<br>
+<b>Schließzeiten (18.09. nachgeprüft):</b> Brauhaus am Kreuzberg Sa 11–22, Rittmayer-Keller 11–21,
+Bierkeller Roppelt Sa 11–22, St. GeorgenBräu Sa 11–22, Löwenbräukeller Sa 11–22,
+Gasthof Löwenbräu Sa 10–22. Unklar bleibt nur Lieberth's Keller am Kreuzberg
+(ab 11 oder ab 14, Schließzeit unbekannt).<br>
 <b>Anrufsammeltaxi</b> ab Stiebarlimbach 22:44 und 00:44, ab Kellerberg 22:52 und 00:52 —
 Anmeldung mind. 1 Std. vorher unter 09191 862511, Zuschlag.]]></description>
       <Point><coordinates>10.94900,49.75400,0</coordinates></Point>
@@ -257,7 +263,7 @@ Willersdorf 108 · 09195 94730]]></description>
       <Point><coordinates>10.9618545,49.7441003,0</coordinates></Point></Placemark>
     <Placemark><styleUrl>#off</styleUrl><name>Gartenkeller Rittmayer, Hallerndorf</name>
       <description><![CDATA[Zweiter Rittmayer-Keller im Ort.
-<b>Öffnungszeiten nicht belegt</b> — vorher anrufen.<br>Am Gartenkeller 2 · 0175 8381367]]></description>
+<b>Mai–September, Mo–Fr ab 16, So ab 14 — Samstag Ruhetag.</b><br>Am Gartenkeller 2 · 0175 8381367]]></description>
       <Point><coordinates>10.9752774,49.7591458,0</coordinates></Point></Placemark>
     <Placemark><styleUrl>#off</styleUrl><name>Kellerwaldschänke Lunz, Willersdorf</name>
       <description><![CDATA[<b>Öffnungszeiten nicht belegt</b> — vorher anrufen.<br>
