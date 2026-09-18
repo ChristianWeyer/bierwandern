@@ -55,7 +55,7 @@ Kreuzberg 3 · 0151 58559325]]></description>
   <Folder><name>3 · Abstecher Stiebarlimbach, 15:15–16:15</name>
     <Placemark><styleUrl>#own</styleUrl><name>6 · Bierkeller Roppelt — 14 Min vom Kreuzberg</name>
       <description><![CDATA[<b>Stiebarlimbacher Kellerbier</b>, Brauerei Roppelt. Am Waldrand.<br>
-<b>Sa ab 11</b> — Ruhetag Do und So, bei schlechtem Wetter zu<br>
+<b>Sa ab 11</b> — Ruhetag Do und So, Mi laut Betrieb unklar, bei schlechtem Wetter zu.<br>
 1,0 km vom Kreuzberg, danach denselben Weg zurück.
 Der Brauerei-Gasthof im Ort bleibt zu (Kellersaison bis Ende September).<br>
 Stiebarlimbach 9 · 09195 7263]]></description>
@@ -66,17 +66,21 @@ Stiebarlimbach 9 · 09195 7263]]></description>
     <Placemark><styleUrl>#own</styleUrl><name>7 · Löwenbräukeller Buttenheim</name>
       <description><![CDATA[<b>Löwenbräu Buttenheim</b> (Johann Modschiedler), eigene Brauerei<br>
 <b>Sa 11–22</b>, Küche 11–14 und 16:30–20:30 · <b>nur Barzahlung</b><br>
-Rund 1,4 km östlich des Bahnhofs.<br>
-Eremitage 3 · 09545 509346]]></description>
+<b>VORBEHALT:</b> Die Website nennt einen Herbst-Betriebsurlaub ohne Datum.
+<b>Vorher anrufen: 09545 509346.</b><br>
+Rund 1,8 km östlich des Bahnhofs.<br>
+Eremitage 3]]></description>
       <Point><coordinates>11.0334053,49.7996483,0</coordinates></Point></Placemark>
     <Placemark><styleUrl>#own</styleUrl><name>8 · St. GeorgenBräu Bierkeller</name>
       <description><![CDATA[<b>St. GeorgenBräu</b>, Familienbrauerei seit 1624<br>
-<b>Sa ab 11</b> — Saison Ende April bis Mitte Oktober, nur bei schönem Wetter<br>
-Kellerstraße · 0151 18020990]]></description>
+<b>Sa ab 11</b> — Saison Ende April bis Mitte Oktober, nur bei schönem Wetter.
+<b>Schließzeit nicht veröffentlicht.</b><br>
+Rund 1,8 km östlich des Bahnhofs. Kellerstraße · 0151 18020990]]></description>
       <Point><coordinates>11.0368917,49.8000755,0</coordinates></Point></Placemark>
     <Placemark><styleUrl>#own</styleUrl><name>9 · Brauerei-Gasthof Löwenbräu</name>
       <description><![CDATA[<b>Löwenbräu Buttenheim</b>, der Gasthof zur Brauerei<br>
-<b>Sa 10–22</b>, warme Küche 11:30–14 und 16:30–19:30<br>
+<b>Sa 10–22</b>, warme Küche 11:30–14 und 16:30–19:30.
+Mit rund 1,3 km der nächstgelegene der drei.<br>
 Marktstraße 8 · 09545 332]]></description>
       <Point><coordinates>11.0314479,49.8017009,0</coordinates></Point></Placemark>
     <Placemark><styleUrl>#transit</styleUrl><name>Bahnhof Buttenheim — Heimfahrt</name>
@@ -86,33 +90,42 @@ Marktstraße 8 · 09545 332]]></description>
 
   <Folder><name>ROUTEN — diesen Stern anklicken</name>
     <Placemark><styleUrl>#fork</styleUrl>
-      <name>Ab 16:30 am Kreuzberg: drei Fortsetzungen</name>
+      <name>Ab 17 Uhr in Stiebarlimbach: drei Fortsetzungen</name>
       <description><![CDATA[<b>Gemeinsamer Vormittag (Marker 1 bis 6):</b> ab Nürnberg Hbf 09:41,
-an Kellerberg 11:03. Dorfkeller Lieberth → Brauereigaststätte Rittmayer → Kreuzberg, drei Keller
-→ Bierkeller Roppelt → zurück zum Kreuzberg. <b>Vier Brauereien, rund 5 km.</b><br><br>
+Umstieg Forchheim, an Kellerberg 11:03. Dorfkeller Lieberth 11:05 → Brauereigaststätte Rittmayer
+11:50 → Aufstieg 12:55 → Kreuzberg 13:30–15:15 → Bierkeller Roppelt 15:30–17:00.
+<b>Vier Brauereien, rund 4 km.</b><br><br>
 
-<b>DIE KLUGE — Empfehlung.</b> Rund 5 km zu Fuß, sechs Brauereien.<br>
-Zurück nach Kellerberg (25 Min), <b>Bus 265 um 17:24, an Buttenheim 18:25</b>.
-Dreieinhalb Stunden Buttenheim. Spart die acht trockenen Kilometer, kostet keine Brauerei.<br><br>
+<b>DIE KLUGE — Empfehlung.</b> Rund 4 km zu Fuß, sechs Brauereien.<br>
+Direkt in <b>Stiebarlimbach um 17:06</b> einsteigen, <b>an Buttenheim 18:25</b>. Kein Rückweg
+zum Kellerberg nötig.<br>
+<b>ACHTUNG: keine durchgehende Busfahrt.</b> Linie 265, Umstieg in Forchheim, dann RE 14 und S1 —
+vier Fahrzeuge, 1:19 h. Wer lieber am Kellerberg einsteigt: 17:24, ebenfalls an 18:25,
+kostet aber 39 Minuten Rückweg.<br><br>
 
-<b>DIE GANZE.</b> Rund 15 km, sechs Brauereien.<br>
-Zu Fuß über Großbuchfeld zum Gasthaus Weber (3 km, ab 15 Uhr), dann 5 km nach Buttenheim,
-Ankunft gegen 19:30. Sonnenuntergang 19:30 — letzte Stunde in der Dämmerung.<br><br>
+<b>DIE GANZE.</b> Rund 14 km, sechs Brauereien.<br>
+Ab Roppelt gegen 16:00 zurück über den Kreuzberg, 3 km zum Gasthaus Weber in Großbuchfeld
+(ab 15 Uhr), dann 5 km nach Buttenheim: Bahnhof gegen 19:15, Keller nochmal 1,3–1,8 km weiter.
+<b>Sonnenuntergang 19:21</b> — letztes Stück im Dunkeln.<br><br>
 
-<b>DAS DREIECK.</b> Rund 5 km, vier Brauereien.<br>
-Am Kreuzberg bleiben, Bus 265 ab Kellerberg um 19:28 oder 21:16.<br><br>
+<b>DAS DREIECK.</b> Rund 4 km, vier Brauereien.<br>
+Im Westen bleiben und direkt heim: ab Stiebarlimbach 19:06 (an Nürnberg 20:48) oder 21:08
+(an 22:19); ab Kellerberg 19:28 oder 21:16 (an 22:19).<br><br>
 
-<b>Bus 265 ab Kellerberg</b> Richtung Forchheim: 10:24, 11:24, 12:24, 13:24, 14:24, 15:24,
-16:24, 17:24, dann 19:28 und 21:16. Nach 17:24 fast zwei Stunden nichts.
-Danach nur Anrufsammeltaxi 22:52 und 00:52, Anmeldung unter 09191 862511.]]></description>
-      <Point><coordinates>10.95200,49.76100,0</coordinates></Point></Placemark>
+<b>Schließzeiten:</b> belegt sind nur Rittmayer-Keller bis 21, Brauereigaststätte Rittmayer bis 22
+und die Buttenheimer bis 22. Friedels Keller, Lieberth's Keller, St. GeorgenBräu und Roppelt
+nennen keine Schließzeit.<br>
+<b>Anrufsammeltaxi</b> ab Stiebarlimbach 22:44 und 00:44, ab Kellerberg 22:52 und 00:52 —
+Anmeldung mind. 1 Std. vorher unter 09191 862511, Zuschlag.]]></description>
+      <Point><coordinates>10.94900,49.75400,0</coordinates></Point>
+    </Placemark>
   </Folder>
 
   <Folder><name>Wegverlauf</name>
     <Placemark><styleUrl>#route</styleUrl>
       <name>Wanderweg — rückwärts gehen: Hallerndorf → Kreuzberg → Buttenheim</name>
       <description><![CDATA[Der echte Wegverlauf aus den offiziellen VGN-Tourdaten (Tour 32),
-12 km, ca. 3 h reine Gehzeit, 177 hm aufwärts. Auf 75 Punkte ausgedünnt.<br>
+12 km, ca. 3 h reine Gehzeit, rund 170–180 hm aufwärts (VGN nennt 170, Kartenrouting 177). Auf 75 Punkte ausgedünnt — die gezeichnete Linie misst dadurch nur rund 10 km, weil beim Ausdünnen Kurven verloren gehen.<br>
 <b>Gegen die übliche Richtung gehen</b> — sonst laufen die ersten acht Kilometer
 an geschlossenen Türen vorbei.]]></description>
       <LineString><tessellate>1</tessellate><coordinates>11.01370,49.79982,0
@@ -201,9 +214,9 @@ vom Kreuzberg nach Stiebarlimbach ist 1,0 km und 14 Minuten über den Feld- und 
       </coordinates></LineString></Placemark>
 
     <Placemark><styleUrl>#spur</styleUrl>
-      <name>Letztes Stück: Bahnhof → Buttenheimer Keller, 1,4 km</name>
+      <name>Letztes Stück: Bahnhof → Buttenheimer Keller, 1,3–1,8 km</name>
       <description><![CDATA[<b>Ergänzung, nicht Teil des VGN-Tracks.</b> Der offizielle Weg endet am
-Bahnhof. Die drei Buttenheimer Einkehren liegen rund <b>1,4 km östlich</b>, quer durch den Ort:
+Bahnhof. Die drei Buttenheimer Einkehren liegen <b>1,3 bis 1,8 km östlich</b>, quer durch den Ort:
 Brauerei-Gasthof Löwenbräu in der Marktstraße, dahinter Löwenbräukeller und
 St. GeorgenBräu Bierkeller. Grobe Linie über die Hauptstraße, nicht metergenau.]]></description>
       <LineString><tessellate>1</tessellate><coordinates>
@@ -256,11 +269,14 @@ Willersdorf 273 · 09195 3271]]></description>
     <Placemark><styleUrl>#transit</styleUrl><name>Bushaltestelle Kellerberg — Ankunft 11:03</name>
       <description><![CDATA[<b>Hin:</b> ab Nürnberg Hbf 09:41, S1 mit Umstieg in Forchheim auf
 den Bus 265, an 11:03.<br>
-<b>Zurück Richtung Forchheim:</b> stündlich zur Minute :24 bis 17:24,
-dann <b>19:28</b> und <b>21:16</b>. Nach 17:24 fast zwei Stunden nichts.<br>
+<b>Zurück ab Kellerberg:</b> stündlich zur Minute :24 bis 17:24, dann <b>19:28</b> und
+<b>21:16</b> (an Nürnberg 22:19).<br>
+<b>Zurück ab Stiebarlimbach</b> — meist die bessere Wahl, spart den Rückweg:
+15:08, 16:08, <b>17:06</b>, <b>19:06</b> (an Nürnberg 20:48), <b>21:08</b> (an 22:19).<br>
+Nach 17:24 bzw. 17:06 kommt fast zwei Stunden nichts.<br>
 Danach nur Anrufsammeltaxi 22:52 und 00:52 — Anmeldung mind. 1 Std. vorher oder am Vortag:
 <b>09191 862511</b>, Zuschlag fällig.]]></description>
-      <Point><coordinates>10.9786995,49.7572742,0</coordinates></Point></Placemark>
+      <Point><coordinates>10.9791500,49.7568500,0</coordinates></Point></Placemark>
   </Folder>
 </Document>
 </kml>
